@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router';
 import { AppLayout } from '../components/AppLayout';
-import { Home } from '../pages/Home';
 import { About } from '../pages/About';
-import { Portfolio } from '../pages/Portfolio';
 import { Contact } from '../pages/Contact';
+import { Home } from '../pages/Home';
+import { Portfolio } from '../pages/Portfolio';
 
 export const router = createBrowserRouter([
     {
