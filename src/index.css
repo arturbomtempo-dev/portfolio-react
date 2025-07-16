@@ -1,0 +1,77 @@
+:root {
+    --hue: 271;
+    --first-color: hsl(var(--hue), 76%, 53%);
+    --title-color: hsl(var(--hue), 4%, 26%);
+    --text-color: hsl(var(--hue), 4%, 38%);
+    --body-color: hsl(var(--hue), 4%, 99%);
+    --container-color: hsl(var(--hue), 4%, 95%);
+    --border-color: hsl(var(--hue), 4%, 91%);
+    --white-color: hsl(var(--hue), 4%, 100%);
+
+    --body-font: 'Montserrat Alternates', sans-serif;
+
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 1.5rem;
+    --large-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+    --weight-800: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--weight-500);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--weight-800);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+}

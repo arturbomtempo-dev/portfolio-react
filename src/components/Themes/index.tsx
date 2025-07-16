@@ -1,7 +1,5 @@
-import { ThemesDiv } from "../../styles/components/Themes/Themes.style";
-
 export function Themes() {
     return (
-        <ThemesDiv>Themes</ThemesDiv>
+        <div>Themes</div>
     );
 }
