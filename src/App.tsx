@@ -11,7 +11,12 @@ export function App() {
         <QueryClientProvider client={queryClient}>
             <LanguageProvider>
                 <TooltipProvider>
-                    <BrowserRouter>
+                    <BrowserRouter
+                        future={{
+                            v7_startTransition: true,
+                            v7_relativeSplatPath: true,
+                        }}
+                    >
                         <Container />
                     </BrowserRouter>
                 </TooltipProvider>
