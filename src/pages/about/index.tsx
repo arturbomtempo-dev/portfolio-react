@@ -131,10 +131,11 @@ export function About() {
                             {timeline.education.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative pl-8 border-l-2 border-primary/30 cursor-pointer group transition-all hover:border-primary/60 hover:bg-muted/30 rounded-r-lg pr-4 py-2 -ml-2"
+                                    className="relative pl-8 cursor-pointer group transition-all hover:bg-muted/30 rounded-r-lg pr-4 py-2"
                                     onClick={() => setSelectedEducation(item)}
                                 >
-                                    <div className="absolute left-2 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
+                                    <div className="absolute left-0 top-4 bottom-0 w-0.5 bg-primary/30 group-hover:bg-primary/60 transition-colors" />
+                                    <div className="absolute left-0 top-4 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
                                     <p className="text-sm text-primary mb-1">{item.year}</p>
                                     <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
                                         {item.title}
@@ -156,10 +157,11 @@ export function About() {
                             {timeline.professional.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative pl-8 border-l-2 border-primary/30 cursor-pointer group transition-all hover:border-primary/60 hover:bg-muted/30 rounded-r-lg pr-4 py-2 -ml-2"
+                                    className="relative pl-8 cursor-pointer group transition-all hover:bg-muted/30 rounded-r-lg pr-4 py-2"
                                     onClick={() => setSelectedExperience(item)}
                                 >
-                                    <div className="absolute left-2 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
+                                    <div className="absolute left-0 top-4 bottom-0 w-0.5 bg-primary/30 group-hover:bg-primary/60 transition-colors" />
+                                    <div className="absolute left-0 top-4 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
                                     <p className="text-sm text-primary mb-1">{item.year}</p>
                                     <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
                                         {item.title}
