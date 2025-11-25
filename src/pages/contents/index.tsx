@@ -2,11 +2,11 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { getContent } from '@/data/index';
 import { ContentType } from '@/data/types';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { ExternalLink, FileText, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
-const Conteudos = () => {
+export function Contents() {
     const [filter, setFilter] = useState<ContentType>('all');
     const { t, language } = useLanguage();
     const { contents } = getContent(language);
@@ -127,6 +127,4 @@ const Conteudos = () => {
             </div>
         </div>
     );
-};
-
-export default Conteudos;
+}

@@ -3,11 +3,11 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { Github, Instagram, Linkedin, Mail, Send, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
-const Contato = () => {
+export function Contact() {
     const { toast } = useToast();
     const { t } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
@@ -157,6 +157,4 @@ const Contato = () => {
             </div>
         </div>
     );
-};
-
-export default Contato;
+}

@@ -1,6 +1,6 @@
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 
-const Footer = () => {
+export function Footer() {
     const { t } = useLanguage();
 
     return (
@@ -10,6 +10,4 @@ const Footer = () => {
             </p>
         </footer>
     );
-};
-
-export default Footer;
+}

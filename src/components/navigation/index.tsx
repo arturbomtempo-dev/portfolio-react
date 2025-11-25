@@ -1,20 +1,20 @@
-import { LanguageSelect } from '@/components/LanguageSelect';
-import { NavLink } from '@/components/NavLink';
+import { LanguageSelect } from '@/components/language-select';
+import { NavLink } from '@/components/nav-link';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-const Navigation = () => {
+export function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { t } = useLanguage();
 
     const navItems = [
         { name: t.nav.home, path: '/' },
-        { name: t.nav.about, path: '/sobre' },
-        { name: t.nav.projects, path: '/projetos' },
-        { name: t.nav.content, path: '/conteudos' },
-        { name: t.nav.contact, path: '/contato' },
+        { name: t.nav.about, path: '/about' },
+        { name: t.nav.projects, path: '/projects' },
+        { name: t.nav.content, path: '/contents' },
+        { name: t.nav.contact, path: '/contact' },
     ];
 
     return (
@@ -78,6 +78,4 @@ const Navigation = () => {
             </div>
         </nav>
     );
-};
-
-export default Navigation;
+}

@@ -1,10 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { getContent } from '@/data/index';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Projetos = () => {
+export function Projects() {
     const { t, language } = useLanguage();
     const { projects } = getContent(language);
 
@@ -22,7 +22,7 @@ const Projetos = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
                     {projects.map((project) => (
-                        <Link key={project.id} to={`/projetos/${project.id}`}>
+                        <Link key={project.id} to={`/projects/${project.id}`}>
                             <Card className="project-card overflow-hidden h-full">
                                 <div className="relative overflow-hidden aspect-video">
                                     <img
@@ -57,6 +57,4 @@ const Projetos = () => {
             </div>
         </div>
     );
-};
-
-export default Projetos;
+}

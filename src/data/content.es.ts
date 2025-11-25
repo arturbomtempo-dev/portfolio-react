@@ -1,7 +1,6 @@
 import { Project, Content, Achievement, TechCategory, Testimonial, Timeline } from './types';
 import { Code, Users, Award, Layers, Database, Palette } from 'lucide-react';
 
-// ==================== PROYECTOS ====================
 export const projects: Project[] = [
     {
         id: 'ecommerce-platform',
@@ -72,7 +71,6 @@ El proyecto demuestra habilidades en diseño de interfaz, desarrollo front-end y
     },
 ];
 
-// ==================== CONTENIDOS ====================
 export const contents: Content[] = [
     {
         type: 'video',
@@ -134,7 +132,6 @@ export const contents: Content[] = [
     },
 ];
 
-// ==================== LOGROS ====================
 export const achievements: Achievement[] = [
     {
         icon: Code,
@@ -153,7 +150,6 @@ export const achievements: Achievement[] = [
     },
 ];
 
-// ==================== CATEGORÍAS DE TECNOLOGÍA ====================
 export const techCategories: TechCategory[] = [
     {
         icon: Layers,
@@ -177,7 +173,6 @@ export const techCategories: TechCategory[] = [
     },
 ];
 
-// ==================== TESTIMONIOS ====================
 export const testimonials: Testimonial[] = [
     {
         name: 'João Silva',
@@ -196,7 +191,6 @@ export const testimonials: Testimonial[] = [
     },
 ];
 
-// ==================== LÍNEA DE TIEMPO ====================
 export const timeline: Timeline = {
     education: [
         {

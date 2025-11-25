@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const Loader = () => {
+export function Loader() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -21,6 +21,4 @@ const Loader = () => {
             <div className="h-12 w-12 animate-spin rounded-full border-4 border-primary/10 border-t-primary" />
         </div>
     );
-};
-
-export default Loader;
+}

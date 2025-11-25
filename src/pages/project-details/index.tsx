@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { getContent } from '@/data/index';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
-const ProjetoDetalhes = () => {
+export function ProjectDetails() {
     const { id } = useParams();
     const { t, language } = useLanguage();
     const { projects } = getContent(language);
@@ -14,7 +14,7 @@ const ProjetoDetalhes = () => {
     return (
         <div className="min-h-screen py-20 px-4">
             <div className="container mx-auto max-w-5xl">
-                <Link to="/projetos" className="back-link mb-8">
+                <Link to="/projects" className="back-link mb-8">
                     <ArrowLeft className="h-4 w-4" />
                     <span>{t.projectDetails.backButton}</span>
                 </Link>
@@ -87,6 +87,4 @@ const ProjetoDetalhes = () => {
             </div>
         </div>
     );
-};
-
-export default ProjetoDetalhes;
+}

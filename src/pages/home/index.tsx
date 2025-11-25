@@ -1,9 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+export function Home() {
     const { t } = useLanguage();
 
     return (
@@ -32,13 +32,13 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link to="/sobre" className="w-1/2 mx-auto sm:mx-0 sm:w-auto">
+                    <Link to="/about" className="w-1/2 mx-auto sm:mx-0 sm:w-auto">
                         <Button size="lg" className="bg-primary hover:bg-primary-glow group w-full">
                             {t.home.aboutButton}
                             <User className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </Link>
-                    <Link to="/contato" className="w-1/2 mx-auto sm:mx-0 sm:w-auto">
+                    <Link to="/contact" className="w-1/2 mx-auto sm:mx-0 sm:w-auto">
                         <Button
                             size="lg"
                             variant="outline"
@@ -51,6 +51,4 @@ const Home = () => {
             </div>
         </div>
     );
-};
-
-export default Home;
+}

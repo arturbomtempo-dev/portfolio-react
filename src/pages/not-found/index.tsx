@@ -1,8 +1,8 @@
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const NotFound = () => {
+export function NotFound() {
     const location = useLocation();
     const { t } = useLanguage();
 
@@ -21,6 +21,6 @@ const NotFound = () => {
             </div>
         </div>
     );
-};
+}
 
 export default NotFound;

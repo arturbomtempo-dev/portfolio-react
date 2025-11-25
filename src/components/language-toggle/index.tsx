@@ -1,8 +1,8 @@
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { Globe } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
-const LanguageToggle = () => {
+export function LanguageToggle() {
     const { language, setLanguage } = useLanguage();
 
     const toggleLanguage = () => {
@@ -21,6 +21,4 @@ const LanguageToggle = () => {
             <span className="text-sm font-medium">{language === 'pt' ? 'EN' : 'PT'}</span>
         </Button>
     );
-};
-
-export default LanguageToggle;
+}

@@ -5,7 +5,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { Globe } from 'lucide-react';
 
 const languageOptions = [
@@ -14,7 +14,7 @@ const languageOptions = [
     { value: 'es', label: 'ES' },
 ] as const;
 
-export const LanguageSelect = () => {
+export function LanguageSelect() {
     const { language, setLanguage } = useLanguage();
 
     return (
@@ -32,4 +32,4 @@ export const LanguageSelect = () => {
             </SelectContent>
         </Select>
     );
-};
+}

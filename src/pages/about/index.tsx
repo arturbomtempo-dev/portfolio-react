@@ -7,10 +7,10 @@ import {
     CarouselPrevious,
 } from '@/components/ui/carousel';
 import { getContent } from '@/data/index';
-import { useLanguage } from '@/i18n/LanguageContext';
+import { useLanguage } from '@/i18n/language-context';
 import { Briefcase, GraduationCap, Quote } from 'lucide-react';
 
-const Sobre = () => {
+export function About() {
     const { t, language } = useLanguage();
     const { achievements, techCategories, testimonials, timeline } = getContent(language);
 
@@ -160,6 +160,4 @@ const Sobre = () => {
             </div>
         </div>
     );
-};
-
-export default Sobre;
+}
