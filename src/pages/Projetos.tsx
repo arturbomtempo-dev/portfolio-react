@@ -1,59 +1,9 @@
 import { Card } from '@/components/ui/card';
+import { projects } from '@/data/projects';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Projetos = () => {
-    const projects = [
-        {
-            id: 'ecommerce-platform',
-            title: 'Plataforma E-commerce',
-            description:
-                'Uma solução completa de e-commerce com painel administrativo, gateway de pagamento e sistema de gestão de estoque.',
-            image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
-            techs: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-        },
-        {
-            id: 'task-manager',
-            title: 'Gerenciador de Tarefas',
-            description:
-                'Aplicativo de produtividade com recursos de colaboração em equipe, drag-and-drop e sincronização em tempo real.',
-            image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop',
-            techs: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind'],
-        },
-        {
-            id: 'fitness-tracker',
-            title: 'Fitness Tracker',
-            description:
-                'App mobile para rastreamento de exercícios, dieta e métricas de saúde com gráficos e metas personalizadas.',
-            image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop',
-            techs: ['React Native', 'Firebase', 'Charts'],
-        },
-        {
-            id: 'portfolio-generator',
-            title: 'Gerador de Portfólio',
-            description:
-                'Ferramenta SaaS que permite criar portfólios profissionais personalizados com templates e integração com GitHub.',
-            image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop',
-            techs: ['Vue.js', 'Python', 'FastAPI', 'MongoDB'],
-        },
-        {
-            id: 'crypto-dashboard',
-            title: 'Dashboard de Criptomoedas',
-            description:
-                'Painel em tempo real para acompanhamento de preços, carteiras e análises do mercado de criptomoedas.',
-            image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop',
-            techs: ['React', 'GraphQL', 'WebSockets'],
-        },
-        {
-            id: 'booking-system',
-            title: 'Sistema de Reservas',
-            description:
-                'Plataforma de agendamento online com calendário integrado, notificações e pagamentos automatizados.',
-            image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop',
-            techs: ['Next.js', 'Node.js', 'PostgreSQL'],
-        },
-    ];
-
     return (
         <div className="min-h-screen py-20 px-4 sm:px-8">
             <div className="container mx-auto max-w-7xl">
@@ -90,7 +40,7 @@ const Projetos = () => {
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
-                                        {project.techs.map((tech) => (
+                                        {project.cardTechs.map((tech) => (
                                             <span key={tech} className="tech-badge text-xs">
                                                 {tech}
                                             </span>

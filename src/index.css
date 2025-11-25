@@ -146,6 +146,19 @@
         @apply w-full;
     }
 
+    .back-link {
+        @apply text-muted-foreground hover:text-foreground transition-colors duration-200 relative inline-flex items-center gap-2;
+    }
+
+    .back-link::after {
+        content: '';
+        @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    }
+
+    .back-link:hover::after {
+        @apply w-full;
+    }
+
     .animate-fade-in {
         animation: fadeIn 0.6s ease-out forwards;
     }
