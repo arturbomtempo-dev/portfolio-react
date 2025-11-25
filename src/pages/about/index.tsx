@@ -6,13 +6,24 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+} from '@/components/ui/dialog';
 import { getContent } from '@/data/index';
+import { Education, Experience } from '@/data/types';
 import { useLanguage } from '@/i18n/language-context';
-import { Briefcase, GraduationCap, Quote } from 'lucide-react';
+import { Briefcase, CheckCircle2, GraduationCap, Quote } from 'lucide-react';
+import { useState } from 'react';
 
 export function About() {
     const { t, language } = useLanguage();
     const { achievements, techCategories, testimonials, timeline } = getContent(language);
+    const [selectedEducation, setSelectedEducation] = useState<Education | null>(null);
+    const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
 
     return (
         <div className="min-h-screen py-20 px-4">
@@ -120,11 +131,12 @@ export function About() {
                             {timeline.education.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative pl-8 border-l-2 border-primary/30"
+                                    className="relative pl-8 border-l-2 border-primary/30 cursor-pointer group transition-all hover:border-primary/60 hover:bg-muted/30 rounded-r-lg pr-4 py-2 -ml-2"
+                                    onClick={() => setSelectedEducation(item)}
                                 >
-                                    <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)]" />
+                                    <div className="absolute left-2 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
                                     <p className="text-sm text-primary mb-1">{item.year}</p>
-                                    <h3 className="text-lg font-heading font-semibold mb-1">
+                                    <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
                                         {item.title}
                                     </h3>
                                     <p className="text-muted-foreground">{item.institution}</p>
@@ -144,11 +156,12 @@ export function About() {
                             {timeline.professional.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="relative pl-8 border-l-2 border-primary/30"
+                                    className="relative pl-8 border-l-2 border-primary/30 cursor-pointer group transition-all hover:border-primary/60 hover:bg-muted/30 rounded-r-lg pr-4 py-2 -ml-2"
+                                    onClick={() => setSelectedExperience(item)}
                                 >
-                                    <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)]" />
+                                    <div className="absolute left-2 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--accent-glow)/0.5)] group-hover:scale-125 transition-transform" />
                                     <p className="text-sm text-primary mb-1">{item.year}</p>
-                                    <h3 className="text-lg font-heading font-semibold mb-1">
+                                    <h3 className="text-lg font-heading font-semibold mb-1 group-hover:text-primary transition-colors">
                                         {item.title}
                                     </h3>
                                     <p className="text-muted-foreground">{item.company}</p>
@@ -157,6 +170,99 @@ export function About() {
                         </div>
                     </div>
                 </div>
+
+                {/* Modal de Educação */}
+                <Dialog open={!!selectedEducation} onOpenChange={() => setSelectedEducation(null)}>
+                    <DialogContent className="sm:max-w-[600px] bg-card-glass backdrop-blur-xl border-border/50">
+                        <DialogHeader>
+                            <div className="flex items-center gap-3 mb-2">
+                                <GraduationCap className="w-6 h-6 text-primary" />
+                                <span className="text-sm text-primary font-medium">
+                                    {selectedEducation?.year}
+                                </span>
+                            </div>
+                            <DialogTitle className="text-2xl font-heading">
+                                {selectedEducation?.title}
+                            </DialogTitle>
+                            <DialogDescription className="text-base text-muted-foreground">
+                                {selectedEducation?.institution}
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4 mt-4">
+                            <p className="text-foreground/90 leading-relaxed">
+                                {selectedEducation?.description}
+                            </p>
+                            <div>
+                                <h4 className="font-heading font-semibold mb-3 text-lg">
+                                    {language === 'pt'
+                                        ? 'O que aprendi:'
+                                        : language === 'en'
+                                          ? 'What I learned:'
+                                          : 'Lo que aprendí:'}
+                                </h4>
+                                <ul className="space-y-2">
+                                    {selectedEducation?.activities.map((activity, index) => (
+                                        <li
+                                            key={index}
+                                            className="flex items-start gap-2 text-foreground/80"
+                                        >
+                                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                            <span>{activity}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </DialogContent>
+                </Dialog>
+
+                {/* Modal de Experiência */}
+                <Dialog
+                    open={!!selectedExperience}
+                    onOpenChange={() => setSelectedExperience(null)}
+                >
+                    <DialogContent className="sm:max-w-[600px] bg-card-glass backdrop-blur-xl border-border/50">
+                        <DialogHeader>
+                            <div className="flex items-center gap-3 mb-2">
+                                <Briefcase className="w-6 h-6 text-primary" />
+                                <span className="text-sm text-primary font-medium">
+                                    {selectedExperience?.year}
+                                </span>
+                            </div>
+                            <DialogTitle className="text-2xl font-heading">
+                                {selectedExperience?.title}
+                            </DialogTitle>
+                            <DialogDescription className="text-base text-muted-foreground">
+                                {selectedExperience?.company}
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4 mt-4">
+                            <p className="text-foreground/90 leading-relaxed">
+                                {selectedExperience?.description}
+                            </p>
+                            <div>
+                                <h4 className="font-heading font-semibold mb-3 text-lg">
+                                    {language === 'pt'
+                                        ? 'Atividades e responsabilidades:'
+                                        : language === 'en'
+                                          ? 'Activities and responsibilities:'
+                                          : 'Actividades y responsabilidades:'}
+                                </h4>
+                                <ul className="space-y-2">
+                                    {selectedExperience?.activities.map((activity, index) => (
+                                        <li
+                                            key={index}
+                                            className="flex items-start gap-2 text-foreground/80"
+                                        >
+                                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                            <span>{activity}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </DialogContent>
+                </Dialog>
             </div>
         </div>
     );

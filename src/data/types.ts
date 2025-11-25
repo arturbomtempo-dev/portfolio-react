@@ -34,12 +34,16 @@ export interface Education {
     year: string;
     title: string;
     institution: string;
+    description: string;
+    activities: string[];
 }
 
 export interface Experience {
     year: string;
     title: string;
     company: string;
+    description: string;
+    activities: string[];
 }
 
 export interface Timeline {

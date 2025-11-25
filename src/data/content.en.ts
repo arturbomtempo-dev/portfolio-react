@@ -197,16 +197,44 @@ export const timeline: Timeline = {
             year: '2023',
             title: 'Postgraduate in Software Architecture',
             institution: 'Federal University',
+            description:
+                'Specialization focused on scalable system design, architectural patterns, and software engineering best practices.',
+            activities: [
+                'Microservices Architecture and Design Patterns',
+                'Cloud Computing and Infrastructure as Code',
+                'DevOps, CI/CD and Automation',
+                'Domain-Driven Design (DDD)',
+                'Security and Performance in Applications',
+            ],
         },
         {
             year: '2020',
             title: 'Bachelor in Computer Science',
             institution: 'State University',
+            description:
+                'Solid foundation in computer science fundamentals, algorithms, data structures, and software development.',
+            activities: [
+                'Algorithms and Data Structures',
+                'Object-Oriented Programming',
+                'Database and SQL',
+                'Software Engineering and Agile Methodologies',
+                'Full Stack Web Development',
+                'Final Project: Academic Management System',
+            ],
         },
         {
             year: '2018',
             title: 'Technical in Systems Development',
             institution: 'Technical Institute',
+            description:
+                'Technical course focused on practical development of web and desktop applications.',
+            activities: [
+                'Programming Logic and Algorithms',
+                'HTML, CSS and JavaScript',
+                'Desktop Application Development',
+                'Relational Databases',
+                'Final Project: Inventory Control System',
+            ],
         },
     ],
     professional: [
@@ -214,16 +242,45 @@ export const timeline: Timeline = {
             year: '2022 - Present',
             title: 'Senior Full Stack Developer',
             company: 'Tech Solutions Inc.',
+            description:
+                'Technical leadership in developing scalable enterprise solutions, team mentoring, and architecture definition.',
+            activities: [
+                'Architecture and development of React and Node.js applications',
+                'Technical mentoring of junior and mid-level developers',
+                'Definition of code standards and best practices',
+                'Integration with AWS services (Lambda, S3, RDS)',
+                'Code review and quality assurance',
+                'Performance optimization and scalability',
+            ],
         },
         {
             year: '2020 - 2022',
             title: 'Full Stack Developer',
             company: 'StartupXYZ',
+            description:
+                'Development of complete features from scratch, from conception to production, in agile startup environment.',
+            activities: [
+                'Development of RESTful APIs with Node.js',
+                'Creation of responsive interfaces with React',
+                'Implementation of automated tests',
+                'PostgreSQL database management',
+                'Deployment and maintenance in production environment',
+                'Active participation in agile ceremonies (Scrum)',
+            ],
         },
         {
             year: '2018 - 2020',
             title: 'Junior Developer',
             company: 'WebDev Agency',
+            description:
+                'Beginning of professional career developing websites and web systems for various clients.',
+            activities: [
+                'Development of responsive websites',
+                'Maintenance and bug fixes in legacy systems',
+                'Layout creation with HTML, CSS and JavaScript',
+                'Integration with third-party APIs',
+                'Technical support to clients',
+            ],
         },
     ],
 };

@@ -197,33 +197,90 @@ export const timeline: Timeline = {
             year: '2023',
             title: 'Pós-graduação em Arquitetura de Software',
             institution: 'Universidade Federal',
+            description:
+                'Especialização focada em design de sistemas escaláveis, padrões arquiteturais e boas práticas de engenharia de software.',
+            activities: [
+                'Arquitetura de Microserviços e Design Patterns',
+                'Cloud Computing e Infraestrutura como Código',
+                'DevOps, CI/CD e Automação',
+                'Domain-Driven Design (DDD)',
+                'Segurança e Performance em Aplicações',
+            ],
         },
         {
             year: '2020',
             title: 'Bacharelado em Ciência da Computação',
             institution: 'Universidade Estadual',
+            description:
+                'Formação sólida em fundamentos de computação, algoritmos, estruturas de dados e desenvolvimento de software.',
+            activities: [
+                'Algoritmos e Estruturas de Dados',
+                'Programação Orientada a Objetos',
+                'Banco de Dados e SQL',
+                'Engenharia de Software e Metodologias Ágeis',
+                'Desenvolvimento Web Full Stack',
+                'Trabalho de Conclusão: Sistema de Gestão Acadêmica',
+            ],
         },
         {
             year: '2018',
             title: 'Técnico em Desenvolvimento de Sistemas',
             institution: 'Instituto Técnico',
+            description:
+                'Curso técnico com foco em desenvolvimento prático de aplicações web e desktop.',
+            activities: [
+                'Lógica de Programação e Algoritmos',
+                'HTML, CSS e JavaScript',
+                'Desenvolvimento de Aplicações Desktop',
+                'Banco de Dados Relacionais',
+                'Projeto Final: Sistema de Controle de Estoque',
+            ],
         },
     ],
     professional: [
         {
             year: '2022 - Atual',
-            title: 'Senior Full Stack Developer',
+            title: 'Desenvolvedor Full Stack Sênior',
             company: 'Tech Solutions Inc.',
+            description:
+                'Liderança técnica no desenvolvimento de soluções empresariais escaláveis, mentoria de equipe e definição de arquitetura.',
+            activities: [
+                'Arquitetura e desenvolvimento de aplicações React e Node.js',
+                'Mentoria técnica de desenvolvedores júnior e pleno',
+                'Definição de padrões de código e boas práticas',
+                'Integração com serviços AWS (Lambda, S3, RDS)',
+                'Code review e garantia de qualidade',
+                'Otimização de performance e escalabilidade',
+            ],
         },
         {
             year: '2020 - 2022',
-            title: 'Full Stack Developer',
+            title: 'Desenvolvedor Full Stack',
             company: 'StartupXYZ',
+            description:
+                'Desenvolvimento de features completas do zero, da concepção à produção, em ambiente ágil de startup.',
+            activities: [
+                'Desenvolvimento de APIs RESTful com Node.js',
+                'Criação de interfaces responsivas com React',
+                'Implementação de testes automatizados',
+                'Gestão de banco de dados PostgreSQL',
+                'Deploy e manutenção em ambiente de produção',
+                'Participação ativa em cerimônias ágeis (Scrum)',
+            ],
         },
         {
             year: '2018 - 2020',
-            title: 'Junior Developer',
+            title: 'Desenvolvedor Júnior',
             company: 'WebDev Agency',
+            description:
+                'Início da carreira profissional desenvolvendo sites e sistemas web para diversos clientes.',
+            activities: [
+                'Desenvolvimento de websites responsivos',
+                'Manutenção e correção de bugs em sistemas legados',
+                'Criação de layouts com HTML, CSS e JavaScript',
+                'Integração com APIs de terceiros',
+                'Suporte técnico a clientes',
+            ],
         },
     ],
 };
