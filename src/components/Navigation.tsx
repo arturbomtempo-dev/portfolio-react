@@ -53,7 +53,7 @@ const Navigation = () => {
 
                 {isMenuOpen && (
                     <div className="md:hidden py-4 animate-fade-in border-t border-border/50 max-w-xs mx-auto">
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 items-center">
                             {navItems.map((item) => (
                                 <NavLink
                                     key={item.path}
