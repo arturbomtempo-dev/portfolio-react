@@ -150,43 +150,45 @@ const Sobre = () => {
                     <h2 className="text-3xl font-heading font-bold mb-8 text-center">
                         Depoimentos
                     </h2>
-                    <Carousel
-                        opts={{
-                            align: 'start',
-                            loop: true,
-                        }}
-                        className="w-full max-w-4xl mx-auto"
-                    >
-                        <CarouselContent>
-                            {testimonials.map((testimonial, index) => (
-                                <CarouselItem key={index}>
-                                    <Card className="project-card">
-                                        <Quote className="w-10 h-10 text-primary/30 mb-4" />
-                                        <p className="text-lg text-foreground/90 mb-6 italic leading-relaxed">
-                                            "{testimonial.text}"
-                                        </p>
-                                        <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                                            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                                                <span className="text-primary font-heading font-bold text-lg">
-                                                    {testimonial.name.charAt(0)}
-                                                </span>
+                    <div className="px-4 sm:px-8 lg:px-12">
+                        <Carousel
+                            opts={{
+                                align: 'start',
+                                loop: true,
+                            }}
+                            className="w-full"
+                        >
+                            <CarouselContent>
+                                {testimonials.map((testimonial, index) => (
+                                    <CarouselItem key={index}>
+                                        <Card className="project-card">
+                                            <Quote className="w-10 h-10 text-primary/30 mb-4" />
+                                            <p className="text-lg text-foreground/90 mb-6 italic leading-relaxed">
+                                                "{testimonial.text}"
+                                            </p>
+                                            <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                                    <span className="text-primary font-heading font-bold text-lg">
+                                                        {testimonial.name.charAt(0)}
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <p className="font-heading font-semibold">
+                                                        {testimonial.name}
+                                                    </p>
+                                                    <p className="text-sm text-muted-foreground">
+                                                        {testimonial.role}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <p className="font-heading font-semibold">
-                                                    {testimonial.name}
-                                                </p>
-                                                <p className="text-sm text-muted-foreground">
-                                                    {testimonial.role}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </Card>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="hidden sm:flex" />
-                        <CarouselNext className="hidden sm:flex" />
-                    </Carousel>
+                                        </Card>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious className="hidden sm:flex" />
+                            <CarouselNext className="hidden sm:flex" />
+                        </Carousel>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 animate-fade-in">
