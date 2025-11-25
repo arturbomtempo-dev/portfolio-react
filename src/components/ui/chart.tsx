@@ -324,10 +324,8 @@ function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key:
 }
 
 export {
-    ChartContainer,
-    ChartTooltip,
-    ChartTooltipContent,
-    ChartLegend,
+    ChartContainer, ChartLegend,
     ChartLegendContent,
-    ChartStyle,
+    ChartStyle, ChartTooltip,
+    ChartTooltipContent
 };

@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Instagram, Youtube, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Github, Instagram, Linkedin, Mail, Send, Youtube } from 'lucide-react';
+import { useState } from 'react';
 
 const Contato = () => {
     const { toast } = useToast();

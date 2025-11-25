@@ -1,4 +1,3 @@
-import { Code, Database, Smartphone, Globe, Award, Briefcase, GraduationCap, Quote } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import {
     Carousel,
@@ -7,6 +6,16 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel';
+import {
+    Award,
+    Briefcase,
+    Code,
+    Database,
+    Globe,
+    GraduationCap,
+    Quote,
+    Smartphone,
+} from 'lucide-react';
 
 const Sobre = () => {
     const achievements = [
