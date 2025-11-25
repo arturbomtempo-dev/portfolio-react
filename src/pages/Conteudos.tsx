@@ -1,12 +1,15 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { contents } from '@/data/content/index';
+import { getContent } from '@/data/index';
 import { ContentType } from '@/data/types';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { ExternalLink, FileText, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
 const Conteudos = () => {
     const [filter, setFilter] = useState<ContentType>('all');
+    const { t, language } = useLanguage();
+    const { contents } = getContent(language);
 
     const filteredContents = contents.filter((content) => {
         if (filter === 'all') return true;
@@ -20,11 +23,10 @@ const Conteudos = () => {
             <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-12 animate-fade-in">
                     <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 glow-text">
-                        Conteúdos
+                        {t.content.title}
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Compartilho conhecimento através de vídeos e artigos sobre desenvolvimento
-                        web, boas práticas e tecnologias modernas.
+                        {t.content.description}
                     </p>
                 </div>
 
@@ -38,7 +40,7 @@ const Conteudos = () => {
                                 : 'border-primary/50 hover:bg-primary/10'
                         }
                     >
-                        Todos
+                        {t.content.all}
                     </Button>
                     <Button
                         variant={filter === 'videos' ? 'default' : 'outline'}
@@ -50,7 +52,7 @@ const Conteudos = () => {
                         }
                     >
                         <Youtube className="mr-2 h-4 w-4" />
-                        Vídeos
+                        {t.content.videos}
                     </Button>
                     <Button
                         variant={filter === 'articles' ? 'default' : 'outline'}
@@ -62,7 +64,7 @@ const Conteudos = () => {
                         }
                     >
                         <FileText className="mr-2 h-4 w-4" />
-                        Artigos
+                        {t.content.articles}
                     </Button>
                 </div>
 
@@ -80,12 +82,16 @@ const Conteudos = () => {
                                         {content.type === 'video' ? (
                                             <div className="bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-2">
                                                 <Youtube className="w-4 h-4" />
-                                                <span className="text-sm font-medium">Vídeo</span>
+                                                <span className="text-sm font-medium">
+                                                    {t.contentBadges.video}
+                                                </span>
                                             </div>
                                         ) : (
                                             <div className="bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-2">
                                                 <FileText className="w-4 h-4" />
-                                                <span className="text-sm font-medium">Artigo</span>
+                                                <span className="text-sm font-medium">
+                                                    {t.contentBadges.article}
+                                                </span>
                                             </div>
                                         )}
                                     </div>
@@ -104,7 +110,13 @@ const Conteudos = () => {
                                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                                         <span>{content.platform}</span>
                                         <span>
-                                            {new Date(content.date).toLocaleDateString('pt-BR')}
+                                            {new Date(content.date).toLocaleDateString(
+                                                language === 'pt'
+                                                    ? 'pt-BR'
+                                                    : language === 'en'
+                                                      ? 'en-US'
+                                                      : 'es-ES'
+                                            )}
                                         </span>
                                     </div>
                                 </div>

@@ -1,10 +1,12 @@
-import { Github, Instagram, Linkedin, Mail, Youtube } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const Footer = () => {
+    const { t } = useLanguage();
+
     return (
         <footer className="glass-card border-t border-border/50 mt-20 py-7">
             <p className="text-sm text-muted-foreground text-center">
-                © {new Date().getFullYear()} Todos os direitos reservados.
+                © {new Date().getFullYear()} {t.footer.rights}
             </p>
         </footer>
     );

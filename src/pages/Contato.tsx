@@ -3,11 +3,13 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { Github, Instagram, Linkedin, Mail, Send, Youtube } from 'lucide-react';
 import { useState } from 'react';
 
 const Contato = () => {
     const { toast } = useToast();
+    const { t } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -44,8 +46,8 @@ const Contato = () => {
 
         setTimeout(() => {
             toast({
-                title: 'Mensagem enviada!',
-                description: 'Obrigado pelo contato. Responderei em breve!',
+                title: t.toast.messageSent,
+                description: t.toast.thankYou,
             });
             setFormData({ name: '', email: '', message: '' });
             setIsLoading(false);
@@ -64,11 +66,10 @@ const Contato = () => {
             <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-12 animate-fade-in">
                     <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 glow-text">
-                        Entre em Contato
+                        {t.contact.title}
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Tem alguma ideia de projeto ou quer apenas trocar uma ideia? Ficarei feliz
-                        em conversar com você!
+                        {t.contact.description}
                     </p>
                 </div>
 
@@ -91,14 +92,14 @@ const Contato = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">
-                                Nome
+                                {t.contact.name}
                             </label>
                             <Input
                                 id="name"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder="Seu nome"
+                                placeholder={t.contact.namePlaceholder}
                                 required
                                 className="bg-muted/30 border-border/50 focus:border-primary"
                             />
@@ -106,7 +107,7 @@ const Contato = () => {
 
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium mb-2">
-                                Email
+                                {t.contact.email}
                             </label>
                             <Input
                                 id="email"
@@ -114,7 +115,7 @@ const Contato = () => {
                                 type="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="seu@email.com"
+                                placeholder={t.contact.emailPlaceholder}
                                 required
                                 className="bg-muted/30 border-border/50 focus:border-primary"
                             />
@@ -122,14 +123,14 @@ const Contato = () => {
 
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium mb-2">
-                                Mensagem
+                                {t.contact.message}
                             </label>
                             <Textarea
                                 id="message"
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Escreva sua mensagem aqui..."
+                                placeholder={t.contact.messagePlaceholder}
                                 required
                                 rows={6}
                                 className="bg-muted/30 border-border/50 focus:border-primary resize-none"
@@ -143,10 +144,10 @@ const Contato = () => {
                             size="lg"
                         >
                             {isLoading ? (
-                                'Enviando...'
+                                t.toast.sending
                             ) : (
                                 <>
-                                    Enviar Mensagem
+                                    {t.contact.sendMessage}
                                     <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                 </>
                             )}

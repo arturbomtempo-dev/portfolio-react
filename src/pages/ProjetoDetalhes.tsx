@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { projects } from '@/data/projects/index';
+import { getContent } from '@/data/index';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
 const ProjetoDetalhes = () => {
     const { id } = useParams();
+    const { t, language } = useLanguage();
+    const { projects } = getContent(language);
 
     const project = projects.find((p) => p.id === id) || projects[0];
 
@@ -13,7 +16,7 @@ const ProjetoDetalhes = () => {
             <div className="container mx-auto max-w-5xl">
                 <Link to="/projetos" className="back-link mb-8">
                     <ArrowLeft className="h-4 w-4" />
-                    <span>Voltar para Projetos</span>
+                    <span>{t.projectDetails.backButton}</span>
                 </Link>
 
                 <div className="animate-fade-in">
@@ -26,7 +29,7 @@ const ProjetoDetalhes = () => {
                             {project.liveUrl && (
                                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                     <Button className="bg-primary hover:bg-primary-glow group">
-                                        Ver Projeto
+                                        {t.projectDetails.viewProject}
                                         <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </Button>
                                 </a>
@@ -42,7 +45,7 @@ const ProjetoDetalhes = () => {
                                         className="border-primary/50 hover:bg-primary/10"
                                     >
                                         <Github className="mr-2 h-4 w-4" />
-                                        Ver Código
+                                        {t.projectDetails.viewCode}
                                     </Button>
                                 </a>
                             )}
@@ -60,7 +63,9 @@ const ProjetoDetalhes = () => {
                     </div>
 
                     <div className="mb-12">
-                        <h2 className="text-2xl font-heading font-bold mb-4">Sobre o Projeto</h2>
+                        <h2 className="text-2xl font-heading font-bold mb-4">
+                            {t.projectDetails.aboutTitle}
+                        </h2>
                         <div className="text-muted-foreground whitespace-pre-line leading-relaxed">
                             {project.fullDescription}
                         </div>
@@ -68,7 +73,7 @@ const ProjetoDetalhes = () => {
 
                     <div>
                         <h2 className="text-2xl font-heading font-bold mb-4">
-                            Tecnologias Utilizadas
+                            {t.projectDetails.techTitle}
                         </h2>
                         <div className="flex flex-wrap gap-3">
                             {project.allTechs.map((tech: string) => (

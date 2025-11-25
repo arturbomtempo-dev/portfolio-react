@@ -6,23 +6,23 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel';
-import { achievements, techCategories, testimonials, timeline } from '@/data/about/index';
-import { GraduationCap, Quote, Briefcase } from 'lucide-react';
+import { getContent } from '@/data/index';
+import { useLanguage } from '@/i18n/LanguageContext';
+import { Briefcase, GraduationCap, Quote } from 'lucide-react';
 
 const Sobre = () => {
+    const { t, language } = useLanguage();
+    const { achievements, techCategories, testimonials, timeline } = getContent(language);
+
     return (
         <div className="min-h-screen py-20 px-4">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-16 animate-fade-in">
                     <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 glow-text">
-                        Sobre Mim
+                        {t.about.title}
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes.
-                        Com mais de 5 anos de experiência no mercado, tenho me dedicado a construir
-                        aplicações web e mobile que fazem a diferença na vida das pessoas. Meu foco
-                        é sempre entregar código limpo, escalável e que atenda às necessidades reais
-                        dos usuários.
+                        {t.about.description}
                     </p>
                 </div>
 
@@ -40,7 +40,7 @@ const Sobre = () => {
 
                 <div className="mb-16 animate-fade-in">
                     <h2 className="text-3xl font-heading font-bold mb-8 text-center">
-                        Tecnologias
+                        {t.about.techTitle}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {techCategories.map((category, index) => (
@@ -65,7 +65,7 @@ const Sobre = () => {
 
                 <div className="mb-16 animate-fade-in">
                     <h2 className="text-3xl font-heading font-bold mb-8 text-center">
-                        Depoimentos
+                        {t.about.testimonialsTitle}
                     </h2>
                     <div className="px-4 sm:px-8 lg:px-12">
                         <Carousel
@@ -112,7 +112,9 @@ const Sobre = () => {
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <GraduationCap className="w-8 h-8 text-primary" />
-                            <h2 className="text-2xl font-heading font-bold">Educação</h2>
+                            <h2 className="text-2xl font-heading font-bold">
+                                {t.about.educationTitle}
+                            </h2>
                         </div>
                         <div className="space-y-6">
                             {timeline.education.map((item, index) => (
@@ -135,7 +137,7 @@ const Sobre = () => {
                         <div className="flex items-center gap-3 mb-6">
                             <Briefcase className="w-8 h-8 text-primary" />
                             <h2 className="text-2xl font-heading font-bold">
-                                Experiência Profissional
+                                {t.about.experienceTitle}
                             </h2>
                         </div>
                         <div className="space-y-6">

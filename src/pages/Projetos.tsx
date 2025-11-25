@@ -1,19 +1,22 @@
 import { Card } from '@/components/ui/card';
-import { projects } from '@/data/projects/index';
+import { getContent } from '@/data/index';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Projetos = () => {
+    const { t, language } = useLanguage();
+    const { projects } = getContent(language);
+
     return (
         <div className="min-h-screen py-20 px-4 sm:px-8">
             <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-16 animate-fade-in">
                     <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 glow-text">
-                        Projetos
+                        {t.projects.title}
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Alguns dos projetos que desenvolvi ao longo da minha carreira. Cada um
-                        representa um desafio único e aprendizado contínuo.
+                        {t.projects.description}
                     </p>
                 </div>
 

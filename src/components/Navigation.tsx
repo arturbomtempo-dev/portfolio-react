@@ -1,17 +1,20 @@
+import { LanguageSelect } from '@/components/LanguageSelect';
 import { NavLink } from '@/components/NavLink';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { t } = useLanguage();
 
     const navItems = [
-        { name: 'Home', path: '/' },
-        { name: 'Sobre', path: '/sobre' },
-        { name: 'Projetos', path: '/projetos' },
-        { name: 'Conteúdos', path: '/conteudos' },
-        { name: 'Contato', path: '/contato' },
+        { name: t.nav.home, path: '/' },
+        { name: t.nav.about, path: '/sobre' },
+        { name: t.nav.projects, path: '/projetos' },
+        { name: t.nav.content, path: '/conteudos' },
+        { name: t.nav.contact, path: '/contato' },
     ];
 
     return (
@@ -27,7 +30,7 @@ const Navigation = () => {
                         </span>
                     </NavLink>
 
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-6">
                         {navItems.map((item) => (
                             <NavLink
                                 key={item.path}
@@ -39,16 +42,19 @@ const Navigation = () => {
                                 {item.name}
                             </NavLink>
                         ))}
+                        <LanguageSelect />
                     </div>
 
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="md:hidden"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    >
-                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </Button>
+                    <div className="flex items-center gap-2 md:hidden">
+                        <LanguageSelect />
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        >
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </Button>
+                    </div>
                 </div>
 
                 {isMenuOpen && (

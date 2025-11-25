@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, User } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
+import { User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const { t } = useLanguage();
+
     return (
         <div className="min-h-screen flex items-center justify-center px-6 sm:px-8">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -14,23 +17,24 @@ const Home = () => {
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <p className="text-base sm:text-lg text-muted-foreground mb-2">Eu sou</p>
+                    <p className="text-base sm:text-lg text-muted-foreground mb-2">
+                        {t.home.greeting}
+                    </p>
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-bold mb-4 glow-text">
                         Artur Bomtempo
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl font-heading font-semibold mb-6 text-primary">
-                        Software Developer
+                        {t.home.role}
                     </p>
                     <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                        Sempre tive o desejo de gerar impacto na vida das pessoas — e encontrei no
-                        desenvolvimento de software uma forma de transformar isso em realidade.
+                        {t.home.description}
                     </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link to="/sobre" className="w-1/2 mx-auto sm:mx-0 sm:w-auto">
                         <Button size="lg" className="bg-primary hover:bg-primary-glow group w-full">
-                            Sobre mim
+                            {t.home.aboutButton}
                             <User className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </Link>
@@ -40,7 +44,7 @@ const Home = () => {
                             variant="outline"
                             className="border-primary/50 hover:bg-primary/10 w-full"
                         >
-                            Entre em Contato
+                            {t.home.contactButton}
                         </Button>
                     </Link>
                 </div>
