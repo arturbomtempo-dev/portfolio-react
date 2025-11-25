@@ -10,7 +10,7 @@ import { About } from './pages/about';
 import { Contact } from './pages/contact';
 import { Contents } from './pages/contents';
 import { Home } from './pages/home';
-import NotFound from './pages/not-found';
+import { NotFound } from './pages/not-found';
 import { ProjectDetails } from './pages/project-details';
 import { Projects } from './pages/projects';
 
