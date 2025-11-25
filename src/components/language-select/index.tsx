@@ -19,13 +19,17 @@ export function LanguageSelect() {
 
     return (
         <Select value={language} onValueChange={setLanguage}>
-            <SelectTrigger className="w-[100px] gap-2">
-                <Globe className="h-4 w-4" />
+            <SelectTrigger className="w-[85px] gap-1.5 text-sm">
+                <Globe className="h-3.5 w-3.5" />
                 <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="min-w-[85px]">
                 {languageOptions.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
+                    <SelectItem 
+                        key={option.value} 
+                        value={option.value}
+                        className="text-sm"
+                    >
                         {option.label}
                     </SelectItem>
                 ))}
