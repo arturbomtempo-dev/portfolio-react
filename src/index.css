@@ -90,6 +90,31 @@
             sans-serif;
         font-weight: 600;
     }
+
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: hsl(var(--primary)) hsl(0 0% 8%);
+    }
+
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: hsl(0 0% 8%);
+        border-radius: 4px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background: hsl(var(--primary));
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--accent-glow));
+    }
 }
 
 @layer components {

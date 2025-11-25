@@ -173,7 +173,6 @@ export function About() {
                     </div>
                 </div>
 
-                {/* Modal de Educação */}
                 <Dialog open={!!selectedEducation} onOpenChange={() => setSelectedEducation(null)}>
                     <DialogContent className="sm:max-w-[600px] bg-card-glass backdrop-blur-xl border-border/50">
                         <DialogHeader>
@@ -218,7 +217,6 @@ export function About() {
                     </DialogContent>
                 </Dialog>
 
-                {/* Modal de Experiência */}
                 <Dialog
                     open={!!selectedExperience}
                     onOpenChange={() => setSelectedExperience(null)}
