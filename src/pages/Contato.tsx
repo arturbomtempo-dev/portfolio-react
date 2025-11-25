@@ -42,7 +42,6 @@ const Contato = () => {
         e.preventDefault();
         setIsLoading(true);
 
-        // Simulando envio - aqui você conectaria com sua edge function
         setTimeout(() => {
             toast({
                 title: 'Mensagem enviada!',

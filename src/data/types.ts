@@ -1,0 +1,60 @@
+import { LucideIcon } from 'lucide-react';
+
+export interface Project {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    cardTechs: string[];
+    fullDescription: string;
+    allTechs: string[];
+    liveUrl?: string;
+    githubUrl?: string;
+}
+
+export interface Achievement {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+}
+
+export interface TechCategory {
+    title: string;
+    icon: LucideIcon;
+    techs: string[];
+}
+
+export interface Testimonial {
+    text: string;
+    name: string;
+    role: string;
+}
+
+export interface Education {
+    year: string;
+    title: string;
+    institution: string;
+}
+
+export interface Experience {
+    year: string;
+    title: string;
+    company: string;
+}
+
+export interface Timeline {
+    education: Education[];
+    professional: Experience[];
+}
+
+export interface Content {
+    type: 'video' | 'article';
+    title: string;
+    description: string;
+    thumbnail: string;
+    url: string;
+    platform: string;
+    date: string;
+}
+
+export type ContentType = 'all' | 'videos' | 'articles';

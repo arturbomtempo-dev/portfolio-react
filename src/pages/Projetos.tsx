@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { projects } from '@/data/projects';
+import { projects } from '@/data/projects/index';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

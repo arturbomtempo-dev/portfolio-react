@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { projects } from '@/data/projects';
+import { projects } from '@/data/projects/index';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
