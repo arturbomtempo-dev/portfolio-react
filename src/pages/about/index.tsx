@@ -85,7 +85,7 @@ export function About() {
                             }}
                             className="w-full"
                         >
-                            <CarouselContent>
+                            <CarouselContent className="items-center">
                                 {testimonials.map((testimonial, index) => (
                                     <CarouselItem key={index}>
                                         <Card className="project-card">
@@ -112,8 +112,8 @@ export function About() {
                                     </CarouselItem>
                                 ))}
                             </CarouselContent>
-                            <CarouselPrevious className="hidden sm:flex" />
-                            <CarouselNext className="hidden sm:flex" />
+                            <CarouselPrevious className="hidden sm:flex -left-12 top-1/2 -translate-y-1/2" />
+                            <CarouselNext className="hidden sm:flex -right-12 top-1/2 -translate-y-1/2" />
                         </Carousel>
                     </div>
                 </div>

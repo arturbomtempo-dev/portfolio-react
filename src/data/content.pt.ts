@@ -208,7 +208,7 @@ export const testimonials: Testimonial[] = [
     },
     {
         name: 'Eduarda Vieira',
-        role: 'Monitora da PUC Minas',
+        role: 'Desenvolvedora Web no WebTech Network',
         image: 'https://media.licdn.com/dms/image/v2/D4D03AQHA-xE76bOPSA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1711488086533?e=1766016000&v=beta&t=pMuG-rgLCUdK3b5CTxj_XpbL6EAJQF0QqQBLdLD5sZs',
         text: 'Durante o segundo semestre de Engenharia de Software, tive a oportunidade de acompanhar de perto o progresso e aprendizado do Artur Bomtempo. Desde que o conheci, ele sempre demonstrou muito engajamento e disposição para ensinar e ajudar os colegas, unindo uma base técnica sólida com experiência de mercado e boas práticas. Seu raciocínio lógico, dedicação e comprometimento são diferenciais claros. Ele aprende com facilidade [...] e se adapta rapidamente aos desafios. Trabalhar com ele em projetos tem sido muito enriquecedor, tanto pela qualidade técnica que entrega quanto pela forma colaborativa e comprometida com que atua em equipe.',
     },
