@@ -14,7 +14,7 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
-import { Education, Experience } from '@/data/types';
+import { Achievement, Education, Experience } from '@/data/types';
 import { useLanguage } from '@/hooks/use-language';
 import { Briefcase, CheckCircle2, GraduationCap, Quote } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -24,6 +24,7 @@ export function About() {
     const { achievements, techCategories, testimonials, timeline } = content;
     const [selectedEducation, setSelectedEducation] = useState<Education | null>(null);
     const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
+    const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
     const [carouselApi, setCarouselApi] = useState<CarouselApi>();
 
     useEffect(() => {
@@ -72,12 +73,16 @@ export function About() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 animate-fade-in">
                     {achievements.map((achievement, index) => (
-                        <Card key={index} className="project-card text-center">
-                            <achievement.icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                            <h3 className="text-xl font-heading font-semibold mb-2">
+                        <Card 
+                            key={index} 
+                            className="project-card text-center cursor-pointer group hover:shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/10 transition-all duration-300"
+                            onClick={() => setSelectedAchievement(achievement)}
+                        >
+                            <achievement.icon className="w-12 h-12 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform duration-300" />
+                            <h3 className="text-xl font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                                 {achievement.title}
                             </h3>
-                            <p className="text-muted-foreground">{achievement.description}</p>
+                            <p className="text-muted-foreground text-sm">{achievement.description}</p>
                         </Card>
                     ))}
                 </div>
@@ -290,6 +295,52 @@ export function About() {
                                         >
                                             <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                                             <span>{activity}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </DialogContent>
+                </Dialog>
+
+                <Dialog
+                    open={!!selectedAchievement}
+                    onOpenChange={() => setSelectedAchievement(null)}
+                >
+                    <DialogContent className="sm:max-w-[600px] bg-card-glass backdrop-blur-xl border-border/50">
+                        <DialogHeader>
+                            <div className="flex items-center gap-3 mb-2">
+                                {selectedAchievement && (
+                                    <selectedAchievement.icon className="w-6 h-6 text-primary" />
+                                )}
+                                <DialogTitle className="text-2xl font-heading">
+                                    {selectedAchievement?.title}
+                                </DialogTitle>
+                            </div>
+                            <DialogDescription className="text-base text-muted-foreground">
+                                {selectedAchievement?.description}
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-4 mt-4">
+                            <p className="text-foreground/90 leading-relaxed">
+                                {selectedAchievement?.fullDescription}
+                            </p>
+                            <div>
+                                <h4 className="font-heading font-semibold mb-3 text-lg">
+                                    {language === 'pt'
+                                        ? 'Destaques:'
+                                        : language === 'en'
+                                          ? 'Highlights:'
+                                          : 'Destacados:'}
+                                </h4>
+                                <ul className="space-y-2">
+                                    {selectedAchievement?.details.map((detail, index) => (
+                                        <li
+                                            key={index}
+                                            className="flex items-start gap-2 text-foreground/80"
+                                        >
+                                            <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                            <span>{detail}</span>
                                         </li>
                                     ))}
                                 </ul>

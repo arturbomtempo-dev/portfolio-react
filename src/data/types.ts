@@ -16,6 +16,8 @@ export interface Achievement {
     icon: LucideIcon;
     title: string;
     description: string;
+    fullDescription: string;
+    details: string[];
 }
 
 export interface TechCategory {

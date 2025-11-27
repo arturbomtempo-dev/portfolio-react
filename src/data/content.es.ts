@@ -137,16 +137,43 @@ export const achievements: Achievement[] = [
         icon: Trophy,
         title: '10+ Premios',
         description: 'Reconocimientos recibidos',
+        fullDescription:
+            'A lo largo de mi trayectoria académica y profesional, he tenido el honor de recibir diversos premios y reconocimientos que validan mi esfuerzo, dedicación y excelencia técnica. Cada logro representa un hito importante en mi desarrollo como desarrollador y profesional.',
+        details: [
+            'Ganador invicto del premio "The Best" promovido por Colégio Cotemig',
+            'Reconocimiento por excelencia académica en disciplinas de programación',
+            'Premios en hackathons y competiciones de desarrollo',
+            'Destaque en proyectos académicos e iniciativas estudiantiles',
+            'Reconocimiento por contribuciones en proyectos open source',
+        ],
     },
     {
         icon: Users,
         title: '4+ Años',
         description: 'Años de Experiencia',
+        fullDescription:
+            'Mi trayectoria profesional comenzó en 2023 y desde entonces vengo acumulando experiencias valiosas en diversas áreas del desarrollo de software. He trabajado con diferentes tecnologías, metodologías y equipos, siempre buscando entregar soluciones de calidad y aprender continuamente.',
+        details: [
+            'Experiencia en desarrollo full stack con enfoque en React y Node.js',
+            'Actuación en startups y empresas de mediano y gran porte',
+            'Trabajo con metodologías ágiles (Scrum, Kanban)',
+            'Experiencia en liderazgo técnico y mentoría de desarrolladores',
+            'Participación en proyectos de diferentes segmentos y complejidades',
+        ],
     },
     {
         icon: Award,
         title: '20+ Certificados',
         description: 'De cursos y conferencias',
+        fullDescription:
+            'El aprendizaje continuo es esencial en el área de tecnología. Por eso, invierto constantemente en cursos, workshops, conferencias y certificaciones para mantenerme actualizado con las mejores prácticas y tecnologías más recientes del mercado.',
+        details: [
+            'Certificaciones en tecnologías front-end (React, Next.js, TypeScript)',
+            'Cursos de back-end y arquitectura de software',
+            'Participación en eventos como DevFest, meetups y conferencias',
+            'Workshops de soft skills y liderazgo técnico',
+            'Certificaciones en metodologías ágiles y buenas prácticas de desarrollo',
+        ],
     },
 ];
 
