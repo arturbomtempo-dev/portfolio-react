@@ -123,7 +123,6 @@ export function Contact() {
 
                 <Card className="project-card p-6 sm:p-8 animate-fade-in max-w-full sm:max-w-4xl mx-auto">
                     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
-                        {/* Hidden fields for FormSubmit configuration */}
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />

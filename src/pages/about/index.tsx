@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card';
+import type { CarouselApi } from '@/components/ui/carousel';
 import {
     Carousel,
     CarouselContent,
@@ -16,13 +17,46 @@ import {
 import { Education, Experience } from '@/data/types';
 import { useLanguage } from '@/hooks/use-language';
 import { Briefcase, CheckCircle2, GraduationCap, Quote } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function About() {
     const { t, content, language } = useLanguage();
     const { achievements, techCategories, testimonials, timeline } = content;
     const [selectedEducation, setSelectedEducation] = useState<Education | null>(null);
     const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
+    const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+
+    useEffect(() => {
+        if (!carouselApi) return;
+
+        const updateHeight = () => {
+            const container = carouselApi.containerNode();
+            const slides = carouselApi.slideNodes();
+            const selectedIndex = carouselApi.selectedScrollSnap();
+            const activeSlide = slides[selectedIndex];
+
+            if (activeSlide && container) {
+                const height = activeSlide.offsetHeight;
+                container.style.height = `${height}px`;
+            }
+        };
+
+        updateHeight();
+        carouselApi.on('select', updateHeight);
+        carouselApi.on('resize', updateHeight);
+
+        // Add window resize listener
+        const handleResize = () => {
+            setTimeout(updateHeight, 100);
+        };
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            carouselApi.off('select', updateHeight);
+            carouselApi.off('resize', updateHeight);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [carouselApi]);
 
     return (
         <div className="min-h-screen py-20 px-4">
@@ -77,18 +111,19 @@ export function About() {
                     <h2 className="text-3xl font-heading font-bold mb-8 text-center">
                         {t.about.testimonialsTitle}
                     </h2>
-                    <div className="px-4 sm:px-8 lg:px-12">
+                    <div className="px-4 sm:px-12 lg:px-16">
                         <Carousel
+                            setApi={setCarouselApi}
                             opts={{
                                 align: 'start',
                                 loop: true,
                             }}
                             className="w-full"
                         >
-                            <CarouselContent className="items-center">
+                            <CarouselContent className="items-start transition-[height] duration-300 ease-in-out">
                                 {testimonials.map((testimonial, index) => (
-                                    <CarouselItem key={index}>
-                                        <Card className="project-card">
+                                    <CarouselItem key={index} className="basis-full">
+                                        <Card className="project-card mx-2 sm:mx-0">
                                             <Quote className="w-10 h-10 text-primary/30 mb-4" />
                                             <p className="text-lg text-foreground/90 mb-6 italic leading-relaxed">
                                                 "{testimonial.text}"
@@ -112,8 +147,8 @@ export function About() {
                                     </CarouselItem>
                                 ))}
                             </CarouselContent>
-                            <CarouselPrevious className="hidden sm:flex -left-12 top-1/2 -translate-y-1/2" />
-                            <CarouselNext className="hidden sm:flex -right-12 top-1/2 -translate-y-1/2" />
+                            <CarouselPrevious className="hidden sm:flex" />
+                            <CarouselNext className="hidden sm:flex" />
                         </Carousel>
                     </div>
                 </div>
