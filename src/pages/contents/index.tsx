@@ -95,7 +95,6 @@ export function Contents() {
                                             </div>
                                         )}
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
                                 </div>
                                 <div className="py-3 sm:py-4 sm:px-0">
                                     <div className="flex items-start justify-between mb-3">

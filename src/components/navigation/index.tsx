@@ -1,5 +1,6 @@
 import { LanguageSelect } from '@/components/language-select';
 import { NavLink } from '@/components/nav-link';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/language-context';
 import { Menu, X } from 'lucide-react';
@@ -42,10 +43,14 @@ export function Navigation() {
                                 {item.name}
                             </NavLink>
                         ))}
-                        <LanguageSelect />
+                        <div className="flex items-center gap-2">
+                            <ThemeToggle />
+                            <LanguageSelect />
+                        </div>
                     </div>
 
                     <div className="flex items-center gap-2 md:hidden">
+                        <ThemeToggle />
                         <LanguageSelect />
                         <Button
                             variant="ghost"

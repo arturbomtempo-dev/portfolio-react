@@ -54,6 +54,51 @@
         --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
+
+    .light {
+        --background: 0 0% 98%;
+        --foreground: 0 0% 10%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 10%;
+        --card-glass: 0 0% 96%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 10%;
+
+        --primary: 145 63% 43%;
+        --primary-foreground: 0 0% 98%;
+        --primary-glow: 145 63% 43%;
+
+        --secondary: 0 0% 92%;
+        --secondary-foreground: 0 0% 10%;
+
+        --muted: 0 0% 94%;
+        --muted-foreground: 0 0% 45%;
+
+        --accent: 145 63% 43%;
+        --accent-foreground: 0 0% 98%;
+        --accent-glow: 145 63% 38%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 88%;
+        --input: 0 0% 88%;
+        --ring: 145 63% 43%;
+
+        --gradient-primary: linear-gradient(135deg, hsl(145 63% 43%) 0%, hsl(145 63% 53%) 100%);
+        --gradient-glow: linear-gradient(
+            135deg,
+            hsl(145 80% 45% / 0.05) 0%,
+            hsl(145 80% 55% / 0.02) 100%
+        );
+        --gradient-card: linear-gradient(135deg, hsl(0 0% 98% / 0.9) 0%, hsl(0 0% 96% / 0.7) 100%);
+
+        --shadow-glow: 0 0 40px hsl(145 80% 45% / 0.15);
+        --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+        --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.05);
+    }
 }
 
 @layer base {
@@ -74,6 +119,9 @@
             BlinkMacSystemFont,
             'Segoe UI',
             sans-serif;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
     }
 
     body {
@@ -102,7 +150,7 @@
 
     * {
         scrollbar-width: thin;
-        scrollbar-color: hsl(var(--primary)) hsl(0 0% 8%);
+        scrollbar-color: hsl(var(--primary)) hsl(var(--background));
     }
 
     *::-webkit-scrollbar {
@@ -111,7 +159,7 @@
     }
 
     *::-webkit-scrollbar-track {
-        background: hsl(0 0% 8%);
+        background: hsl(var(--background));
         border-radius: 4px;
     }
 
@@ -141,12 +189,29 @@
     }
 
     .tech-badge {
-        @apply px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary-foreground text-sm font-medium;
+        @apply px-4 py-2 rounded-full text-sm font-medium;
+        background: hsl(var(--primary) / 0.1);
+        border: 1px solid hsl(var(--primary) / 0.3);
+        color: hsl(var(--primary));
         transition: var(--transition-smooth);
     }
 
+    .light .tech-badge {
+        background: hsl(var(--primary) / 0.08);
+        border: 1px solid hsl(var(--primary) / 0.25);
+        color: hsl(var(--primary));
+    }
+
     .tech-badge:hover {
-        @apply bg-primary/20 border-primary/50 shadow-[0_0_20px_hsl(var(--accent-glow)/0.3)];
+        background: hsl(var(--primary) / 0.2);
+        border-color: hsl(var(--primary) / 0.5);
+        box-shadow: 0 0 20px hsl(var(--accent-glow) / 0.3);
+    }
+
+    .light .tech-badge:hover {
+        background: hsl(var(--primary) / 0.15);
+        border-color: hsl(var(--primary) / 0.4);
+        box-shadow: 0 0 15px hsl(var(--accent-glow) / 0.2);
     }
 
     .project-card {
@@ -155,8 +220,14 @@
     }
 
     .project-card:hover {
-        @apply border-primary/50 shadow-[0_0_30px_hsl(var(--accent-glow)/0.2)];
+        border-color: hsl(var(--primary) / 0.5);
+        box-shadow: 0 0 30px hsl(var(--accent-glow) / 0.2);
         transform: translateY(-4px);
+    }
+
+    .light .project-card:hover {
+        border-color: hsl(var(--primary) / 0.4);
+        box-shadow: 0 10px 40px hsl(0 0% 0% / 0.08);
     }
 
     .nav-link {

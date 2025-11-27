@@ -30,7 +30,6 @@ export function Projects() {
                                         alt={project.title}
                                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
                                 </div>
                                 <div className="py-3 sm:py-4 sm:px-0">
                                     <div className="flex items-start justify-between mb-3">

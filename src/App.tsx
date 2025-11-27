@@ -1,4 +1,5 @@
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { ThemeProvider } from '@/contexts/theme-context';
 import { LanguageProvider } from '@/i18n/language-context';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
@@ -9,18 +10,20 @@ export function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <LanguageProvider>
-                <TooltipProvider>
-                    <BrowserRouter
-                        future={{
-                            v7_startTransition: true,
-                            v7_relativeSplatPath: true,
-                        }}
-                    >
-                        <Container />
-                    </BrowserRouter>
-                </TooltipProvider>
-            </LanguageProvider>
+            <ThemeProvider>
+                <LanguageProvider>
+                    <TooltipProvider>
+                        <BrowserRouter
+                            future={{
+                                v7_startTransition: true,
+                                v7_relativeSplatPath: true,
+                            }}
+                        >
+                            <Container />
+                        </BrowserRouter>
+                    </TooltipProvider>
+                </LanguageProvider>
+            </ThemeProvider>
         </QueryClientProvider>
     );
 }
