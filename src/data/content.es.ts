@@ -177,16 +177,19 @@ export const testimonials: Testimonial[] = [
     {
         name: 'João Silva',
         role: 'CEO en TechStart',
+        image: 'https://ui-avatars.com/api/?name=Joao+Silva&size=200&background=0ea5e9&color=fff',
         text: '¡Trabajo excepcional! Entregó el proyecto antes de tiempo y superó todas las expectativas. Altamente recomendado.',
     },
     {
         name: 'Maria Santos',
         role: 'CTO en InnovaTech',
+        image: 'https://ui-avatars.com/api/?name=Maria+Santos&size=200&background=8b5cf6&color=fff',
         text: 'Profesional extremadamente competente y dedicado. La calidad del código y atención al detalle son impresionantes.',
     },
     {
         name: 'Carlos Oliveira',
         role: 'Product Manager',
+        image: 'https://ui-avatars.com/api/?name=Carlos+Oliveira&size=200&background=10b981&color=fff',
         text: 'Excelente comunicación y capacidad para transformar ideas en soluciones prácticas. Fue un placer trabajar juntos.',
     },
 ];

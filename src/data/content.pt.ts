@@ -1,5 +1,15 @@
-import { Project, Content, Achievement, TechCategory, Testimonial, Timeline } from './types';
-import { Code, Users, Award, Layers, Database, Palette } from 'lucide-react';
+import {
+    Award,
+    Code,
+    Database,
+    Layers,
+    Palette,
+    Server,
+    Smartphone,
+    Trophy,
+    Users,
+} from 'lucide-react';
+import { Achievement, Content, Project, TechCategory, Testimonial, Timeline } from './types';
 
 export const projects: Project[] = [
     {
@@ -134,42 +144,68 @@ export const contents: Content[] = [
 
 export const achievements: Achievement[] = [
     {
-        icon: Code,
-        title: '50+ Projetos',
-        description: 'Projetos desenvolvidos e entregues',
+        icon: Trophy,
+        title: '10+ Prêmios',
+        description: 'Reconhecimentos recebidos',
     },
     {
         icon: Users,
-        title: '30+ Clientes',
-        description: 'Clientes satisfeitos',
+        title: '4+ Anos',
+        description: 'Anos de Experiência',
     },
     {
         icon: Award,
-        title: '5+ Anos',
-        description: 'Anos de experiência',
+        title: '20+ Certificados',
+        description: 'De cursos e palestras',
     },
 ];
 
 export const techCategories: TechCategory[] = [
     {
-        icon: Layers,
-        title: 'Frontend',
-        techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vue.js'],
+        icon: Palette,
+        title: 'Front-end',
+        techs: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React.js',
+            'Next.js',
+            'Vite',
+            'Tailwind CSS',
+            'jQuery',
+            'Bootstrap',
+            'Sass',
+            'styled-components',
+        ],
+    },
+    {
+        icon: Server,
+        title: 'Back-end',
+        techs: [
+            'Node.js',
+            'Express,js',
+            'NestJS',
+            'Java',
+            'Spring Boot',
+            'Maven',
+            'PHP',
+            'Python',
+            'Django',
+            'TypeScript',
+            'Prisma',
+            'C#',
+            '.NET',
+        ],
     },
     {
         icon: Database,
-        title: 'Backend',
-        techs: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'Redis'],
+        title: 'Banco de Dados',
+        techs: ['MySQL', 'PostgreSQL', 'SQLite', 'MongoDB'],
     },
     {
-        icon: Palette,
-        title: 'Design',
-        techs: ['Figma', 'Adobe XD', 'Framer Motion', 'GSAP'],
-    },
-    {
-        icon: Code,
-        title: 'Ferramentas',
-        techs: ['Git', 'Docker', 'AWS', 'CI/CD', 'Jest'],
+        icon: Smartphone,
+        title: 'Mobile',
+        techs: ['Swift', 'Kotlin'],
     },
 ];
 
@@ -177,16 +213,19 @@ export const testimonials: Testimonial[] = [
     {
         name: 'João Silva',
         role: 'CEO da TechStart',
+        image: 'https://ui-avatars.com/api/?name=Joao+Silva&size=200&background=0ea5e9&color=fff',
         text: 'Trabalho excepcional! Entregou o projeto antes do prazo e superou todas as expectativas. Altamente recomendado.',
     },
     {
         name: 'Maria Santos',
         role: 'CTO da InnovaTech',
+        image: 'https://ui-avatars.com/api/?name=Maria+Santos&size=200&background=8b5cf6&color=fff',
         text: 'Profissional extremamente competente e dedicado. A qualidade do código e atenção aos detalhes são impressionantes.',
     },
     {
         name: 'Carlos Oliveira',
         role: 'Product Manager',
+        image: 'https://ui-avatars.com/api/?name=Carlos+Oliveira&size=200&background=10b981&color=fff',
         text: 'Excelente comunicação e capacidade de transformar ideias em soluções práticas. Foi um prazer trabalhar juntos.',
     },
 ];
@@ -304,7 +343,7 @@ export const ui = {
     about: {
         title: 'Sobre Mim',
         description:
-            'Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Com mais de 5 anos de experiência no mercado, tenho me dedicado a construir aplicações web e mobile que fazem a diferença na vida das pessoas. Meu foco é sempre entregar código limpo, escalável e que atenda às necessidades reais dos usuários.',
+            'Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Com mais de 4 anos de experiência, tenho me dedicado a construir aplicações web e mobile que fazem a diferença na vida das pessoas. Meu foco é sempre entregar código limpo, escalável e que atenda às necessidades reais dos usuários.',
         techTitle: 'Tecnologias',
         testimonialsTitle: 'Depoimentos',
         educationTitle: 'Educação',
