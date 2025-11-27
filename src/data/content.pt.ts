@@ -1,4 +1,4 @@
-import { Award, Database, Palette, Server, Smartphone, Trophy, Users } from 'lucide-react';
+import { Database, Palette, Presentation, Server, Smartphone, Trophy, Users } from 'lucide-react';
 import { Achievement, Content, Project, TechCategory, Testimonial, Timeline } from './types';
 
 export const projects: Project[] = [
@@ -162,17 +162,17 @@ export const achievements: Achievement[] = [
         ],
     },
     {
-        icon: Award,
-        title: '20+ Certificados',
-        description: 'De cursos e palestras',
+        icon: Presentation,
+        title: '5+ Palestras',
+        description: 'Workshops e cursos ministrados',
         fullDescription:
-            'O aprendizado contínuo é essencial na área de tecnologia. Por isso, invisto constantemente em cursos, workshops, conferências e certificações para me manter atualizado com as melhores práticas e tecnologias mais recentes do mercado.',
+            'Acredito que compartilhar conhecimento é fundamental para o crescimento da comunidade tech. Por isso, venho ministrando palestras, workshops e cursos sobre desenvolvimento de software, compartilhando experiências e ajudando outros desenvolvedores em sua jornada.',
         details: [
-            'Certificações em tecnologias front-end (React, Next.js, TypeScript)',
-            'Cursos de back-end e arquitetura de software',
-            'Participação em eventos como DevFest, meetups e conferências',
-            'Workshops de soft skills e liderança técnica',
-            'Certificações em metodologias ágeis e boas práticas de desenvolvimento',
+            'Palestras em eventos como DevFest, meetups e conferências',
+            'Workshops de React.js, Next.js e desenvolvimento front-end',
+            'Cursos de Backend com Java, Spring Boot e Node.js',
+            'Mentoria técnica para novos integrantes do WebTech Network',
+            'Apresentações sobre boas práticas e arquitetura de software',
         ],
     },
 ];
