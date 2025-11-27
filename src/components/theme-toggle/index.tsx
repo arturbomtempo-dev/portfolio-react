@@ -10,15 +10,15 @@ export function ThemeToggle() {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="relative w-9 h-9 rounded-lg transition-all duration-300 hover:bg-accent/10"
+            className="relative w-9 h-9 rounded-lg transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/10 text-foreground"
             aria-label="Alternar tema"
         >
             <Sun
-                className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0"
+                className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 text-foreground"
                 strokeWidth={2}
             />
             <Moon
-                className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100"
+                className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100 text-foreground"
                 strokeWidth={2}
             />
         </Button>
