@@ -13,15 +13,14 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
-import { getContent } from '@/data/index';
 import { Education, Experience } from '@/data/types';
 import { useLanguage } from '@/i18n/language-context';
 import { Briefcase, CheckCircle2, GraduationCap, Quote } from 'lucide-react';
 import { useState } from 'react';
 
 export function About() {
-    const { t, language } = useLanguage();
-    const { achievements, techCategories, testimonials, timeline } = getContent(language);
+    const { t, content, language } = useLanguage();
+    const { achievements, techCategories, testimonials, timeline } = content;
     const [selectedEducation, setSelectedEducation] = useState<Education | null>(null);
     const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
 

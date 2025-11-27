@@ -284,3 +284,81 @@ export const timeline: Timeline = {
         },
     ],
 };
+
+export const ui = {
+    nav: {
+        home: 'Início',
+        about: 'Sobre',
+        projects: 'Projetos',
+        content: 'Conteúdos',
+        contact: 'Contato',
+    },
+    home: {
+        greeting: 'Eu sou',
+        role: 'Desenvolvedor de Software',
+        description:
+            'Sempre tive o desejo de gerar impacto na vida das pessoas — e encontrei no desenvolvimento de software uma forma de transformar isso em realidade.',
+        aboutButton: 'Sobre mim',
+        contactButton: 'Entre em Contato',
+    },
+    about: {
+        title: 'Sobre Mim',
+        description:
+            'Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Com mais de 5 anos de experiência no mercado, tenho me dedicado a construir aplicações web e mobile que fazem a diferença na vida das pessoas. Meu foco é sempre entregar código limpo, escalável e que atenda às necessidades reais dos usuários.',
+        techTitle: 'Tecnologias',
+        testimonialsTitle: 'Depoimentos',
+        educationTitle: 'Educação',
+        experienceTitle: 'Experiência Profissional',
+    },
+    projects: {
+        title: 'Projetos',
+        description:
+            'Alguns dos projetos que desenvolvi ao longo da minha carreira. Cada um representa um desafio único e aprendizado contínuo.',
+    },
+    projectDetails: {
+        backButton: 'Voltar para Projetos',
+        viewProject: 'Ver Projeto',
+        viewCode: 'Ver Código',
+        aboutTitle: 'Sobre o Projeto',
+        techTitle: 'Tecnologias Utilizadas',
+    },
+    content: {
+        title: 'Conteúdos',
+        description:
+            'Compartilho conhecimento através de vídeos e artigos sobre desenvolvimento web, boas práticas e tecnologias modernas.',
+        all: 'Todos',
+        videos: 'Vídeos',
+        articles: 'Artigos',
+    },
+    contact: {
+        title: 'Entre em Contato',
+        description:
+            'Estou sempre aberto a novas oportunidades e colaborações. Entre em contato comigo através dos canais abaixo.',
+        email: 'E-mail',
+        phone: 'Telefone',
+        location: 'Localização',
+        sendMessage: 'Enviar Mensagem',
+        name: 'Nome',
+        namePlaceholder: 'Seu nome completo',
+        emailPlaceholder: 'seu@email.com',
+        message: 'Mensagem',
+        messagePlaceholder: 'Escreva sua mensagem aqui...',
+    },
+    notFound: {
+        title: '404',
+        message: 'Ops! Página não encontrada',
+        backButton: 'Voltar para Home',
+    },
+    footer: {
+        rights: 'Todos os direitos reservados.',
+    },
+    contentBadges: {
+        video: 'Vídeo',
+        article: 'Artigo',
+    },
+    toast: {
+        messageSent: 'Mensagem enviada!',
+        thankYou: 'Obrigado pelo contato. Responderei em breve!',
+        sending: 'Enviando...',
+    },
+};

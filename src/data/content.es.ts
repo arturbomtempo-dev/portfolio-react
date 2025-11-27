@@ -284,3 +284,81 @@ export const timeline: Timeline = {
         },
     ],
 };
+
+export const ui = {
+    nav: {
+        home: 'Inicio',
+        about: 'Acerca de',
+        projects: 'Proyectos',
+        content: 'Contenidos',
+        contact: 'Contacto',
+    },
+    home: {
+        greeting: 'Soy',
+        role: 'Desarrollador de Software',
+        description:
+            'Siempre he tenido el deseo de generar impacto en la vida de las personas — y encontré en el desarrollo de software una forma de convertir eso en realidad.',
+        aboutButton: 'Acerca de mí',
+        contactButton: 'Contáctame',
+    },
+    about: {
+        title: 'Acerca de Mí',
+        description:
+            'Soy un desarrollador apasionado por crear soluciones innovadoras y eficientes. Con más de 5 años de experiencia en el mercado, me he dedicado a construir aplicaciones web y móviles que marcan la diferencia en la vida de las personas. Mi enfoque es siempre entregar código limpio, escalable y que satisfaga las necesidades reales de los usuarios.',
+        techTitle: 'Tecnologías',
+        testimonialsTitle: 'Testimonios',
+        educationTitle: 'Educación',
+        experienceTitle: 'Experiencia Profesional',
+    },
+    projects: {
+        title: 'Proyectos',
+        description:
+            'Algunos de los proyectos que he desarrollado a lo largo de mi carrera. Cada uno representa un desafío único y aprendizaje continuo.',
+    },
+    projectDetails: {
+        backButton: 'Volver a Proyectos',
+        viewProject: 'Ver Proyecto',
+        viewCode: 'Ver Código',
+        aboutTitle: 'Acerca del Proyecto',
+        techTitle: 'Tecnologías Utilizadas',
+    },
+    content: {
+        title: 'Contenidos',
+        description:
+            'Comparto conocimientos a través de videos y artículos sobre desarrollo web, buenas prácticas y tecnologías modernas.',
+        all: 'Todos',
+        videos: 'Videos',
+        articles: 'Artículos',
+    },
+    contact: {
+        title: 'Contáctame',
+        description:
+            'Siempre estoy abierto a nuevas oportunidades y colaboraciones. Contáctame a través de los canales a continuación.',
+        email: 'Correo Electrónico',
+        phone: 'Teléfono',
+        location: 'Ubicación',
+        sendMessage: 'Enviar Mensaje',
+        name: 'Nombre',
+        namePlaceholder: 'Tu nombre completo',
+        emailPlaceholder: 'tu@email.com',
+        message: 'Mensaje',
+        messagePlaceholder: 'Escribe tu mensaje aquí...',
+    },
+    notFound: {
+        title: '404',
+        message: '¡Ups! Página no encontrada',
+        backButton: 'Volver al Inicio',
+    },
+    footer: {
+        rights: 'Todos los derechos reservados.',
+    },
+    contentBadges: {
+        video: 'Video',
+        article: 'Artículo',
+    },
+    toast: {
+        messageSent: '¡Mensaje enviado!',
+        thankYou: 'Gracias por contactar. ¡Responderé pronto!',
+        sending: 'Enviando...',
+    },
+};

@@ -1,13 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { getContent } from '@/data/index';
 import { useLanguage } from '@/i18n/language-context';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
 export function ProjectDetails() {
-    const { id } = useParams();
-    const { t, language } = useLanguage();
-    const { projects } = getContent(language);
+    const { id } = useParams<{ id: string }>();
+    const { t, content } = useLanguage();
+    const { projects } = content;
 
     const project = projects.find((p) => p.id === id) || projects[0];
 

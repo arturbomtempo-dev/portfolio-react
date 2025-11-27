@@ -1,10 +1,13 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
-import { Language, TranslationKeys, translations } from './translations';
+import { getContent, Language } from '@/data';
+import { createContext, useContext, useEffect, useState } from 'react';
+
+type ContentType = ReturnType<typeof getContent>;
 
 interface LanguageContextType {
     language: Language;
     setLanguage: (lang: Language) => void;
-    t: TranslationKeys;
+    t: ContentType['ui'];
+    content: ContentType;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -24,10 +27,13 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
         document.documentElement.lang = language;
     }, [language]);
 
+    const content = getContent(language);
+
     const value = {
         language,
         setLanguage,
-        t: translations[language],
+        t: content.ui,
+        content,
     };
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

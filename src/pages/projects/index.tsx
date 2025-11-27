@@ -1,12 +1,11 @@
 import { Card } from '@/components/ui/card';
-import { getContent } from '@/data/index';
 import { useLanguage } from '@/i18n/language-context';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Projects() {
-    const { t, language } = useLanguage();
-    const { projects } = getContent(language);
+    const { t, content } = useLanguage();
+    const { projects } = content;
 
     return (
         <div className="min-h-screen py-20 px-4 sm:px-8">

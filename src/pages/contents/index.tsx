@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { getContent } from '@/data/index';
 import { ContentType } from '@/data/types';
 import { useLanguage } from '@/i18n/language-context';
 import { ExternalLink, FileText, Youtube } from 'lucide-react';
@@ -8,8 +7,8 @@ import { useState } from 'react';
 
 export function Contents() {
     const [filter, setFilter] = useState<ContentType>('all');
-    const { t, language } = useLanguage();
-    const { contents } = getContent(language);
+    const { t, content, language } = useLanguage();
+    const { contents } = content;
 
     const filteredContents = contents.filter((content) => {
         if (filter === 'all') return true;

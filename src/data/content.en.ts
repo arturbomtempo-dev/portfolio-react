@@ -284,3 +284,81 @@ export const timeline: Timeline = {
         },
     ],
 };
+
+export const ui = {
+    nav: {
+        home: 'Home',
+        about: 'About',
+        projects: 'Projects',
+        content: 'Content',
+        contact: 'Contact',
+    },
+    home: {
+        greeting: 'I am',
+        role: 'Software Developer',
+        description:
+            "I have always had the desire to make an impact on people's lives — and I found in software development a way to turn that into reality.",
+        aboutButton: 'About me',
+        contactButton: 'Get in Touch',
+    },
+    about: {
+        title: 'About Me',
+        description:
+            "I am a developer passionate about creating innovative and efficient solutions. With over 5 years of experience in the market, I have been dedicated to building web and mobile applications that make a difference in people's lives. My focus is always on delivering clean, scalable code that meets users' real needs.",
+        techTitle: 'Technologies',
+        testimonialsTitle: 'Testimonials',
+        educationTitle: 'Education',
+        experienceTitle: 'Professional Experience',
+    },
+    projects: {
+        title: 'Projects',
+        description:
+            'Some of the projects I have developed throughout my career. Each one represents a unique challenge and continuous learning.',
+    },
+    projectDetails: {
+        backButton: 'Back to Projects',
+        viewProject: 'View Project',
+        viewCode: 'View Code',
+        aboutTitle: 'About the Project',
+        techTitle: 'Technologies Used',
+    },
+    content: {
+        title: 'Content',
+        description:
+            'I share knowledge through videos and articles about web development, best practices, and modern technologies.',
+        all: 'All',
+        videos: 'Videos',
+        articles: 'Articles',
+    },
+    contact: {
+        title: 'Get in Touch',
+        description:
+            'I am always open to new opportunities and collaborations. Contact me through the channels below.',
+        email: 'Email',
+        phone: 'Phone',
+        location: 'Location',
+        sendMessage: 'Send Message',
+        name: 'Name',
+        namePlaceholder: 'Your full name',
+        emailPlaceholder: 'your@email.com',
+        message: 'Message',
+        messagePlaceholder: 'Write your message here...',
+    },
+    notFound: {
+        title: '404',
+        message: 'Oops! Page not found',
+        backButton: 'Back to Home',
+    },
+    footer: {
+        rights: 'All rights reserved.',
+    },
+    contentBadges: {
+        video: 'Video',
+        article: 'Article',
+    },
+    toast: {
+        messageSent: 'Message sent!',
+        thankYou: 'Thank you for contacting. I will reply soon!',
+        sending: 'Sending...',
+    },
+};
