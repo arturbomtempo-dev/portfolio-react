@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Github, Instagram, Linkedin, Mail, Send, Youtube } from 'lucide-react';
 import { useState } from 'react';

@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ContentType } from '@/data/types';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { ExternalLink, FileText, Youtube } from 'lucide-react';
 import { useState } from 'react';
 

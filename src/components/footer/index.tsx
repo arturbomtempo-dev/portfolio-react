@@ -1,4 +1,4 @@
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 
 export function Footer() {
     const { t } = useLanguage();

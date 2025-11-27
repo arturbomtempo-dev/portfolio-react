@@ -14,7 +14,7 @@ import {
     DialogTitle,
 } from '@/components/ui/dialog';
 import { Education, Experience } from '@/data/types';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { Briefcase, CheckCircle2, GraduationCap, Quote } from 'lucide-react';
 import { useState } from 'react';
 

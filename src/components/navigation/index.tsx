@@ -2,7 +2,7 @@ import { LanguageSelect } from '@/components/language-select';
 import { NavLink } from '@/components/nav-link';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 

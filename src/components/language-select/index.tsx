@@ -5,7 +5,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { Globe } from 'lucide-react';
 
 const languageOptions = [

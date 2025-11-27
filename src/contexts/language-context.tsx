@@ -1,16 +1,16 @@
 import { getContent, Language } from '@/data';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 type ContentType = ReturnType<typeof getContent>;
 
-interface LanguageContextType {
+export interface LanguageContextType {
     language: Language;
     setLanguage: (lang: Language) => void;
     t: ContentType['ui'];
     content: ContentType;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
     const [language, setLanguageState] = useState<Language>(() => {
@@ -37,12 +37,4 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     };
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-};
-
-export const useLanguage = () => {
-    const context = useContext(LanguageContext);
-    if (!context) {
-        throw new Error('useLanguage must be used within LanguageProvider');
-    }
-    return context;
 };

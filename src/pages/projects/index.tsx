@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

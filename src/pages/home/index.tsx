@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

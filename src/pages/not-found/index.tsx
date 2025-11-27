@@ -1,4 +1,4 @@
-import { useLanguage } from '@/i18n/language-context';
+import { useLanguage } from '@/hooks/use-language';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 

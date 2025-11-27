@@ -1,6 +1,6 @@
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { LanguageProvider } from '@/contexts/language-context';
 import { ThemeProvider } from '@/contexts/theme-context';
-import { LanguageProvider } from '@/i18n/language-context';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
 import { Container } from './components/app-container';
