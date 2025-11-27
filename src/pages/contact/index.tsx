@@ -2,22 +2,51 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/i18n/language-context';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { Github, Instagram, Linkedin, Mail, Send, Youtube } from 'lucide-react';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+    name: z
+        .string()
+        .min(1, 'O nome é obrigatório')
+        .min(5, 'O nome deve ter no mínimo 5 caracteres'),
+    email: z
+        .string()
+        .min(1, 'O e-mail é obrigatório')
+        .email('Formato de e-mail inválido'),
+    message: z
+        .string()
+        .min(1, 'A mensagem é obrigatória')
+        .min(50, 'A mensagem deve ter no mínimo 50 caracteres'),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 export function Contact() {
-    const { toast } = useToast();
     const { t } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm<ContactFormData>({
+        resolver: zodResolver(contactSchema),
+    });
+
+    const onSubmit = async (data: ContactFormData) => {
         setIsLoading(true);
 
-        const form = e.currentTarget;
-        const formData = new FormData(form);
+        const formData = new FormData();
+        formData.append('name', data.name);
+        formData.append('email', data.email);
+        formData.append('message', data.message);
 
         try {
             const response = await fetch('https://formsubmit.co/arturbcolen@gmail.com', {
@@ -29,19 +58,16 @@ export function Contact() {
             });
 
             if (response.ok) {
-                toast({
-                    title: t.toast.messageSent,
-                    description: t.toast.thankYou,
+                toast.success('Mensagem enviada com sucesso!', {
+                    description: 'Obrigado pelo contato. Responderei em breve!',
                 });
-                form.reset();
+                reset();
             } else {
                 throw new Error('Failed to send message');
             }
         } catch (error) {
-            toast({
-                title: 'Erro ao enviar mensagem',
+            toast.error('Erro ao enviar mensagem', {
                 description: 'Por favor, tente novamente mais tarde.',
-                variant: 'destructive',
             });
         } finally {
             setIsLoading(false);
@@ -99,7 +125,7 @@ export function Contact() {
                 </div>
 
                 <Card className="project-card p-6 sm:p-8 animate-fade-in max-w-full sm:max-w-4xl mx-auto">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
                         {/* Hidden fields for FormSubmit configuration */}
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_template" value="table" />
@@ -120,11 +146,18 @@ export function Contact() {
                             </label>
                             <Input
                                 id="name"
-                                name="name"
+                                {...register('name')}
                                 placeholder={t.contact.namePlaceholder}
-                                required
-                                className="bg-muted/30 border-border/50 focus:border-primary"
+                                className={`bg-muted/30 border-border/50 focus:border-primary transition-colors ${
+                                    errors.name ? 'border-red-500 focus:border-red-500' : ''
+                                }`}
+                                aria-invalid={errors.name ? 'true' : 'false'}
                             />
+                            {errors.name && (
+                                <p className="text-red-500 text-sm mt-1" role="alert">
+                                    {errors.name.message}
+                                </p>
+                            )}
                         </div>
 
                         <div>
@@ -133,12 +166,19 @@ export function Contact() {
                             </label>
                             <Input
                                 id="email"
-                                name="email"
                                 type="email"
+                                {...register('email')}
                                 placeholder={t.contact.emailPlaceholder}
-                                required
-                                className="bg-muted/30 border-border/50 focus:border-primary"
+                                className={`bg-muted/30 border-border/50 focus:border-primary transition-colors ${
+                                    errors.email ? 'border-red-500 focus:border-red-500' : ''
+                                }`}
+                                aria-invalid={errors.email ? 'true' : 'false'}
                             />
+                            {errors.email && (
+                                <p className="text-red-500 text-sm mt-1" role="alert">
+                                    {errors.email.message}
+                                </p>
+                            )}
                         </div>
 
                         <div>
@@ -147,12 +187,19 @@ export function Contact() {
                             </label>
                             <Textarea
                                 id="message"
-                                name="message"
+                                {...register('message')}
                                 placeholder={t.contact.messagePlaceholder}
-                                required
                                 rows={6}
-                                className="bg-muted/30 border-border/50 focus:border-primary resize-none"
+                                className={`bg-muted/30 border-border/50 focus:border-primary resize-none transition-colors ${
+                                    errors.message ? 'border-red-500 focus:border-red-500' : ''
+                                }`}
+                                aria-invalid={errors.message ? 'true' : 'false'}
                             />
+                            {errors.message && (
+                                <p className="text-red-500 text-sm mt-1" role="alert">
+                                    {errors.message.message}
+                                </p>
+                            )}
                         </div>
 
                         <Button
