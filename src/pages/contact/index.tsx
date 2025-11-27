@@ -11,11 +11,42 @@ export function Contact() {
     const { toast } = useToast();
     const { t } = useLanguage();
     const [isLoading, setIsLoading] = useState(false);
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch('https://formsubmit.co/arturbcolen@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json',
+                },
+            });
+
+            if (response.ok) {
+                toast({
+                    title: t.toast.messageSent,
+                    description: t.toast.thankYou,
+                });
+                form.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            toast({
+                title: 'Erro ao enviar mensagem',
+                description: 'Por favor, tente novamente mais tarde.',
+                variant: 'destructive',
+            });
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     const socialLinks = [
         { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-primary' },
@@ -27,7 +58,7 @@ export function Contact() {
         },
         {
             icon: Mail,
-            href: 'mailto:seu@email.com',
+            href: 'mailto:arturbcolen@gmail.com',
             label: 'Email',
             color: 'hover:text-red-500',
         },
@@ -39,27 +70,6 @@ export function Contact() {
         },
         { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-600' },
     ];
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsLoading(true);
-
-        setTimeout(() => {
-            toast({
-                title: t.toast.messageSent,
-                description: t.toast.thankYou,
-            });
-            setFormData({ name: '', email: '', message: '' });
-            setIsLoading(false);
-        }, 1500);
-    };
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
 
     return (
         <div className="min-h-screen py-20 px-6 sm:px-8">
@@ -90,6 +100,20 @@ export function Contact() {
 
                 <Card className="project-card p-6 sm:p-8 animate-fade-in max-w-full sm:max-w-4xl mx-auto">
                     <form onSubmit={handleSubmit} className="space-y-6">
+                        {/* Hidden fields for FormSubmit configuration */}
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="Nova mensagem do portfólio!"
+                        />
+                        <input
+                            type="hidden"
+                            name="_autoresponse"
+                            value="Obrigado pela sua mensagem! Entrarei em contato em breve."
+                        />
+
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">
                                 {t.contact.name}
@@ -97,8 +121,6 @@ export function Contact() {
                             <Input
                                 id="name"
                                 name="name"
-                                value={formData.name}
-                                onChange={handleChange}
                                 placeholder={t.contact.namePlaceholder}
                                 required
                                 className="bg-muted/30 border-border/50 focus:border-primary"
@@ -113,8 +135,6 @@ export function Contact() {
                                 id="email"
                                 name="email"
                                 type="email"
-                                value={formData.email}
-                                onChange={handleChange}
                                 placeholder={t.contact.emailPlaceholder}
                                 required
                                 className="bg-muted/30 border-border/50 focus:border-primary"
@@ -128,8 +148,6 @@ export function Contact() {
                             <Textarea
                                 id="message"
                                 name="message"
-                                value={formData.message}
-                                onChange={handleChange}
                                 placeholder={t.contact.messagePlaceholder}
                                 required
                                 rows={6}
