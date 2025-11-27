@@ -15,10 +15,7 @@ const contactSchema = z.object({
         .string()
         .min(1, 'O nome é obrigatório')
         .min(5, 'O nome deve ter no mínimo 5 caracteres'),
-    email: z
-        .string()
-        .min(1, 'O e-mail é obrigatório')
-        .email('Formato de e-mail inválido'),
+    email: z.string().min(1, 'O e-mail é obrigatório').email('Formato de e-mail inválido'),
     message: z
         .string()
         .min(1, 'A mensagem é obrigatória')
@@ -129,11 +126,7 @@ export function Contact() {
                         {/* Hidden fields for FormSubmit configuration */}
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_template" value="table" />
-                        <input
-                            type="hidden"
-                            name="_subject"
-                            value="Nova mensagem do portfólio!"
-                        />
+                        <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
                         <input
                             type="hidden"
                             name="_autoresponse"

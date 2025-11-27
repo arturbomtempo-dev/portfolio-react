@@ -25,11 +25,7 @@ export function LanguageSelect() {
             </SelectTrigger>
             <SelectContent className="min-w-[85px]">
                 {languageOptions.map((option) => (
-                    <SelectItem 
-                        key={option.value} 
-                        value={option.value}
-                        className="text-sm"
-                    >
+                    <SelectItem key={option.value} value={option.value} className="text-sm">
                         {option.label}
                     </SelectItem>
                 ))}

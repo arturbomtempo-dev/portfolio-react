@@ -7,6 +7,6 @@ export const useLanguage = (): LanguageContextType => {
     if (!context) {
         throw new Error('useLanguage must be used within LanguageProvider');
     }
-    
+
     return context;
 };

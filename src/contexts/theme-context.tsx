@@ -17,21 +17,21 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         if (savedTheme) {
             return savedTheme;
         }
-        
+
         if (window.matchMedia('(prefers-color-scheme: light)').matches) {
             return 'light';
         }
-        
+
         return 'dark';
     });
 
     useEffect(() => {
         const root = document.documentElement;
-        
+
         root.classList.remove('light', 'dark');
-        
+
         root.classList.add(theme);
-        
+
         localStorage.setItem('theme', theme);
     }, [theme]);
 
