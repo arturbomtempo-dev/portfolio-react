@@ -76,6 +76,15 @@
             sans-serif;
     }
 
+    body {
+        overflow-y: scroll !important;
+        padding-right: 0 !important;
+    }
+
+    html {
+        overflow-y: scroll !important;
+    }
+
     h1,
     h2,
     h3,
