@@ -2,8 +2,19 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ContentType } from '@/data/types';
 import { useLanguage } from '@/hooks/use-language';
-import { ExternalLink, FileText, Youtube } from 'lucide-react';
+import { ExternalLink, FileText, Mail, Youtube } from 'lucide-react';
 import { useState } from 'react';
+
+function formatDate(dateString: string, locale: string): string {
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+
+    return date.toLocaleDateString(locale, {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    });
+}
 
 export function Contents() {
     const [filter, setFilter] = useState<ContentType>('all');
@@ -14,6 +25,7 @@ export function Contents() {
         if (filter === 'all') return true;
         if (filter === 'videos') return content.type === 'video';
         if (filter === 'articles') return content.type === 'article';
+        if (filter === 'newsletters') return content.type === 'newsletter';
         return true;
     });
 
@@ -65,6 +77,18 @@ export function Contents() {
                         <FileText className="mr-2 h-4 w-4" />
                         {t.content.articles}
                     </Button>
+                    <Button
+                        variant={filter === 'newsletters' ? 'default' : 'outline'}
+                        onClick={() => setFilter('newsletters')}
+                        className={
+                            filter === 'newsletters'
+                                ? 'bg-primary hover:bg-primary-glow'
+                                : 'border-primary/50 hover:bg-primary/10'
+                        }
+                    >
+                        <Mail className="mr-2 h-4 w-4" />
+                        {t.content.newsletters}
+                    </Button>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
@@ -85,11 +109,18 @@ export function Contents() {
                                                     {t.contentBadges.video}
                                                 </span>
                                             </div>
-                                        ) : (
+                                        ) : content.type === 'article' ? (
                                             <div className="bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-2">
                                                 <FileText className="w-4 h-4" />
                                                 <span className="text-sm font-medium">
                                                     {t.contentBadges.article}
+                                                </span>
+                                            </div>
+                                        ) : (
+                                            <div className="bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-2">
+                                                <Mail className="w-4 h-4" />
+                                                <span className="text-sm font-medium">
+                                                    {t.contentBadges.newsletter}
                                                 </span>
                                             </div>
                                         )}
@@ -108,7 +139,8 @@ export function Contents() {
                                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                                         <span>{content.platform}</span>
                                         <span>
-                                            {new Date(content.date).toLocaleDateString(
+                                            {formatDate(
+                                                content.date,
                                                 language === 'pt'
                                                     ? 'pt-BR'
                                                     : language === 'en'

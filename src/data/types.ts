@@ -55,7 +55,7 @@ export interface Timeline {
 }
 
 export interface Content {
-    type: 'video' | 'article';
+    type: 'video' | 'article' | 'newsletter';
     title: string;
     description: string;
     thumbnail: string;
@@ -64,4 +64,4 @@ export interface Content {
     date: string;
 }
 
-export type ContentType = 'all' | 'videos' | 'articles';
+export type ContentType = 'all' | 'videos' | 'articles' | 'newsletters';

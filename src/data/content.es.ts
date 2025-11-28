@@ -501,6 +501,7 @@ export const ui = {
         all: 'Todos',
         videos: 'Videos',
         articles: 'Artículos',
+        newsletters: 'Newsletters',
     },
     contact: {
         title: 'Contáctame',
@@ -527,6 +528,7 @@ export const ui = {
     contentBadges: {
         video: 'Video',
         article: 'Artículo',
+        newsletter: 'Newsletter',
     },
     toast: {
         messageSent: '¡Mensaje enviado!',
