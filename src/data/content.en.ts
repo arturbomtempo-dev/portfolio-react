@@ -125,7 +125,7 @@ A high-impact project, delivered in partnership with GDG BH, focused on quality,
         id: 'planner',
         title: 'plann.er',
         description:
-            'Complete travel itinerary platform developed during Rocketseat\'s NLW Journey.',
+            "Complete travel itinerary platform developed during Rocketseat's NLW Journey.",
         image: 'https://github.com/user-attachments/assets/18dbb5f1-7a6b-4972-b26a-6a742fe5bf66',
         cardTechs: ['Node.js', 'React', 'TypeScript'],
         fullDescription: `Project developed during Rocketseat's NLW Journey event, with the goal of consolidating modern web development concepts, both on the front-end and back-end. The platform simulates a complete travel organization system, allowing management of participants, activities, and itinerary details.
@@ -179,7 +179,7 @@ An essential project to reinforce React practices, API consumption logic, and co
         id: 'in-kids',
         title: 'I&N Kids',
         description:
-            'Platform created to help parents reduce children\'s screen time and encourage offline activities.',
+            "Platform created to help parents reduce children's screen time and encourage offline activities.",
         image: 'https://github.com/user-attachments/assets/82627220-3445-4de3-a4e1-908f432034a9',
         cardTechs: ['HTML', 'CSS', 'JavaScript'],
         fullDescription: `I&N Kids was developed during the first semester of college, focusing on initial front-end development learning. The platform aims to help parents find healthy and educational alternatives to reduce children's screen time, promoting offline activities and greater family interaction.
@@ -241,8 +241,7 @@ A remarkable project that combined interface creation, API logic, and conversati
     {
         id: 'netflix-homepage',
         title: "Netflix's Homepage",
-        description:
-            'Clone of Netflix\'s homepage developed to consolidate Front-end fundamentals.',
+        description: "Clone of Netflix's homepage developed to consolidate Front-end fundamentals.",
         image: 'https://user-images.githubusercontent.com/96635074/208282907-fa614507-2d83-4b1f-a7be-cc038cabeb61.png',
         cardTechs: ['Node.js'],
         fullDescription: `Project developed in a Digital Innovation One class with the goal of practicing essential Front-end concepts and introducing initial studies with Node.js. The application recreates Netflix's homepage, displaying lists of categorized movies.
@@ -262,7 +261,7 @@ A simple yet fundamental project in the web development evolution process.`,
         id: 'inverted-world',
         title: 'Inverted World Landing Page',
         description:
-            'Themed landing page inspired by Stranger Things Season 4, created during DIO\'s Front-end Week.',
+            "Themed landing page inspired by Stranger Things Season 4, created during DIO's Front-end Week.",
         image: 'https://user-images.githubusercontent.com/96635074/195481231-2a82fd4e-3547-42e8-9556-df96160db140.png',
         cardTechs: ['JavaScript'],
         fullDescription: `Project developed during Digital Innovation One's Front-end Week, with the goal of creating a themed landing page about Stranger Things Season 4 and reinforcing fundamental HTML, CSS, and JavaScript concepts.
@@ -330,7 +329,7 @@ Note: to run locally, you need to configure an OpenAI API key in the .env file.`
     {
         id: 'rocketpay',
         title: 'RocketPay',
-        description: 'Virtual card generator developed during Rocketseat\'s Explorer Lab.',
+        description: "Virtual card generator developed during Rocketseat's Explorer Lab.",
         image: 'https://user-images.githubusercontent.com/96635074/196974349-1f579c57-7789-4409-a135-1e31bb68363b.png',
         cardTechs: ['JavaScript'],
         fullDescription: `Project developed during Rocketseat's Explorer Lab, focused on improving logic and DOM manipulation in JavaScript.
@@ -362,7 +361,8 @@ export const contents: Content[] = [
     {
         type: 'newsletter',
         title: 'Beyond Technology',
-        description: 'The importance of mastering fundamentals before choosing stacks and frameworks.',
+        description:
+            'The importance of mastering fundamentals before choosing stacks and frameworks.',
         thumbnail:
             'https://media.licdn.com/dms/image/v2/D4D12AQH6c888A3glCg/article-cover_image-shrink_720_1280/B4DZqEJk36HwAI-/0/1763153701095?e=1766016000&v=beta&t=iZlgyCMBXZu6yj5y7oFuhBAMcIG-jts9OD4OUpVfons',
         url: 'https://www.linkedin.com/pulse/al%C3%A9m-da-tecnologia-por-que-dominar-fundamentos-vale-mais-bomtempo-8q0lf/',
@@ -394,7 +394,8 @@ export const contents: Content[] = [
     {
         type: 'article',
         title: 'API Authentication with JWT and Bcrypt',
-        description: 'Complete guide to authentication in Node.js and Express using JWT and Bcrypt.',
+        description:
+            'Complete guide to authentication in Node.js and Express using JWT and Bcrypt.',
         thumbnail:
             'https://miro.medium.com/v2/resize:fit:720/format:webp/1*I50MOlC9LSdL9nW_FRgh4g.png',
         url: 'https://medium.com/@arturbomtempo/autentica%C3%A7%C3%A3o-de-apis-em-node-js-com-jwt-e-bcrypt-2e1564d264d9',
@@ -426,8 +427,7 @@ export const contents: Content[] = [
     {
         type: 'video',
         title: 'Object-Oriented Programming Live Sessions',
-        description:
-            'Live classes explaining key OOP concepts with practical examples.',
+        description: 'Live classes explaining key OOP concepts with practical examples.',
         thumbnail:
             'https://i.ytimg.com/vi/DvZatfx5X4w/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE%3D&rs=AOn4CLCJQavzpa4l38nZ6EMpdnu_f6vPjQ',
         url: 'https://youtube.com/playlist?list=PLeBlAOvjkM5jhpxHFU0SFfYf_Z3UbpUbY&si=8Uljc9fsCvsT_cuL',
@@ -518,7 +518,7 @@ export const achievements: Achievement[] = [
         fullDescription:
             'I have a great interest in teaching and knowledge sharing. Throughout my journey, I have given talks, workshops, and educational meetings at events of different sizes, always seeking to contribute to the training of new professionals and encourage the community to evolve together.',
         details: [
-            'Workshops for two consecutive years at DevFest BH, the city\'s largest technology event, promoted by Google Developers Group',
+            "Workshops for two consecutive years at DevFest BH, the city's largest technology event, promoted by Google Developers Group",
             'Talks at PUC Minas Computer Science Summer School',
             'Meetings and training sessions as Chapter Lead at WebTech Network',
             'Backend Journey at WebTech Network in partnership with LEVTY, with over 500 participants',
@@ -814,6 +814,7 @@ export const ui = {
         projects: 'Projects',
         content: 'Content',
         contact: 'Contact',
+        logo: 'Portfolio',
     },
     home: {
         greeting: 'I am',
@@ -847,7 +848,7 @@ export const ui = {
     content: {
         title: 'Content',
         description:
-            'I share knowledge through videos and articles about web development, best practices, and modern technologies.',
+            'I share knowledge for free about web development, best practices, and modern technologies.',
         all: 'All',
         videos: 'Videos',
         articles: 'Articles',
@@ -873,16 +874,27 @@ export const ui = {
         backButton: 'Back to Home',
     },
     footer: {
-        rights: 'All rights reserved.',
+        rights: '© {year} Artur Bomtempo. All rights reserved.',
     },
+    siteTitle: 'Artur Bomtempo | Portfolio',
     contentBadges: {
         video: 'Video',
         article: 'Article',
         newsletter: 'Newsletter',
     },
     toast: {
-        messageSent: 'Message sent!',
+        messageSent: 'Message sent successfully!',
         thankYou: 'Thank you for contacting. I will reply soon!',
+        errorSending: 'Error sending message',
+        errorDescription: 'Please try again later.',
         sending: 'Sending...',
+    },
+    validation: {
+        nameRequired: 'Name is required',
+        nameMinLength: 'Name must be at least 5 characters',
+        emailRequired: 'Email is required',
+        emailInvalid: 'Invalid email format',
+        messageRequired: 'Message is required',
+        messageMinLength: 'Message must be at least 50 characters',
     },
 };

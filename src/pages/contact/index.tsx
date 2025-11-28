@@ -10,22 +10,23 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
-const contactSchema = z.object({
-    name: z
-        .string()
-        .min(1, 'O nome é obrigatório')
-        .min(5, 'O nome deve ter no mínimo 5 caracteres'),
-    email: z.string().min(1, 'O e-mail é obrigatório').email('Formato de e-mail inválido'),
-    message: z
-        .string()
-        .min(1, 'A mensagem é obrigatória')
-        .min(50, 'A mensagem deve ter no mínimo 50 caracteres'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+    name: string;
+    email: string;
+    message: string;
+};
 
 export function Contact() {
     const { t } = useLanguage();
+
+    const contactSchema = z.object({
+        name: z.string().min(1, t.validation.nameRequired).min(5, t.validation.nameMinLength),
+        email: z.string().min(1, t.validation.emailRequired).email(t.validation.emailInvalid),
+        message: z
+            .string()
+            .min(1, t.validation.messageRequired)
+            .min(50, t.validation.messageMinLength),
+    });
     const [isLoading, setIsLoading] = useState(false);
 
     const {
@@ -55,16 +56,16 @@ export function Contact() {
             });
 
             if (response.ok) {
-                toast.success('Mensagem enviada com sucesso!', {
-                    description: 'Obrigado pelo contato. Responderei em breve!',
+                toast.success(t.toast.messageSent, {
+                    description: t.toast.thankYou,
                 });
                 reset();
             } else {
                 throw new Error('Failed to send message');
             }
         } catch (error) {
-            toast.error('Erro ao enviar mensagem', {
-                description: 'Por favor, tente novamente mais tarde.',
+            toast.error(t.toast.errorSending, {
+                description: t.toast.errorDescription,
             });
         } finally {
             setIsLoading(false);

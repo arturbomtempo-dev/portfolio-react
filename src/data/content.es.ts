@@ -330,7 +330,8 @@ Obs.: para ejecutar localmente, es necesario configurar una clave de la API de O
     {
         id: 'rocketpay',
         title: 'RocketPay',
-        description: 'Generador de tarjeta virtual desarrollado durante el Explorer Lab de Rocketseat.',
+        description:
+            'Generador de tarjeta virtual desarrollado durante el Explorer Lab de Rocketseat.',
         image: 'https://user-images.githubusercontent.com/96635074/196974349-1f579c57-7789-4409-a135-1e31bb68363b.png',
         cardTechs: ['JavaScript'],
         fullDescription: `Proyecto desarrollado durante el Explorer Lab de Rocketseat, enfocado en el perfeccionamiento de lógica y manipulación del DOM en JavaScript.
@@ -352,7 +353,8 @@ export const contents: Content[] = [
     {
         type: 'newsletter',
         title: 'Automatización de Procesos',
-        description: 'Cómo automatizar tareas repetitivas para ganar productividad en el día a día.',
+        description:
+            'Cómo automatizar tareas repetitivas para ganar productividad en el día a día.',
         thumbnail:
             'https://media.licdn.com/dms/image/v2/D4D12AQGmY4FMbcE33g/article-cover_image-shrink_720_1280/B4DZqXh54pG8AM-/0/1763478846119?e=1766016000&v=beta&t=z2t8azcXmyaae8sHcp5H77cKNSDVRp_-flkgf_-waUs',
         url: 'https://www.linkedin.com/pulse/automa%C3%A7%C3%A3o-de-processos-o-poder-fazer-computador-por-voc%C3%AA-bomtempo-8qtgf/',
@@ -814,6 +816,7 @@ export const ui = {
         projects: 'Proyectos',
         content: 'Contenidos',
         contact: 'Contacto',
+        logo: 'Portafolio',
     },
     home: {
         greeting: 'Soy',
@@ -847,7 +850,7 @@ export const ui = {
     content: {
         title: 'Contenidos',
         description:
-            'Comparto conocimientos a través de videos y artículos sobre desarrollo web, buenas prácticas y tecnologías modernas.',
+            'Comparto conocimientos de forma gratuita sobre desarrollo web, buenas prácticas y tecnologías modernas.',
         all: 'Todos',
         videos: 'Videos',
         articles: 'Artículos',
@@ -873,16 +876,27 @@ export const ui = {
         backButton: 'Volver al Inicio',
     },
     footer: {
-        rights: 'Todos los derechos reservados.',
+        rights: '© {year} Artur Bomtempo. Todos los derechos reservados.',
     },
+    siteTitle: 'Artur Bomtempo | Portafolio',
     contentBadges: {
         video: 'Video',
         article: 'Artículo',
         newsletter: 'Newsletter',
     },
     toast: {
-        messageSent: '¡Mensaje enviado!',
+        messageSent: '¡Mensaje enviado con éxito!',
         thankYou: 'Gracias por contactar. ¡Responderé pronto!',
+        errorSending: 'Error al enviar mensaje',
+        errorDescription: 'Por favor, intenta nuevamente más tarde.',
         sending: 'Enviando...',
+    },
+    validation: {
+        nameRequired: 'El nombre es obligatorio',
+        nameMinLength: 'El nombre debe tener al menos 5 caracteres',
+        emailRequired: 'El correo electrónico es obligatorio',
+        emailInvalid: 'Formato de correo electrónico inválido',
+        messageRequired: 'El mensaje es obligatorio',
+        messageMinLength: 'El mensaje debe tener al menos 50 caracteres',
     },
 };

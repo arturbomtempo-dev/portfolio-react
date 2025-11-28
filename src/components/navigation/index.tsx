@@ -27,7 +27,8 @@ export function Navigation() {
                         className="text-xl font-heading font-bold text-foreground hover:text-primary transition-colors"
                     >
                         <span className="glow-text">
-                            Portfólio<span className="text-primary">.</span>
+                            {t.nav.logo}
+                            <span className="text-primary">.</span>
                         </span>
                     </NavLink>
 

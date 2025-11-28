@@ -836,6 +836,7 @@ export const ui = {
         projects: 'Projetos',
         content: 'Conteúdos',
         contact: 'Contato',
+        logo: 'Portfólio',
     },
     home: {
         greeting: 'Eu sou',
@@ -869,7 +870,7 @@ export const ui = {
     content: {
         title: 'Conteúdos',
         description:
-            'Compartilho conhecimento através de vídeos e artigos sobre desenvolvimento web, boas práticas e tecnologias modernas.',
+            'Compartilho conhecimento de forma gratuita sobre desenvolvimento web, boas práticas e tecnologias modernas.',
         all: 'Todos',
         videos: 'Vídeos',
         articles: 'Artigos',
@@ -895,16 +896,27 @@ export const ui = {
         backButton: 'Voltar para Home',
     },
     footer: {
-        rights: 'Todos os direitos reservados.',
+        rights: '© {year} Artur Bomtempo. Todos os direitos reservados.',
     },
+    siteTitle: 'Artur Bomtempo | Portfólio',
     contentBadges: {
         video: 'Vídeo',
         article: 'Artigo',
         newsletter: 'Newsletter',
     },
     toast: {
-        messageSent: 'Mensagem enviada!',
+        messageSent: 'Mensagem enviada com sucesso!',
         thankYou: 'Obrigado pelo contato. Responderei em breve!',
+        errorSending: 'Erro ao enviar mensagem',
+        errorDescription: 'Por favor, tente novamente mais tarde.',
         sending: 'Enviando...',
+    },
+    validation: {
+        nameRequired: 'O nome é obrigatório',
+        nameMinLength: 'O nome deve ter no mínimo 5 caracteres',
+        emailRequired: 'O e-mail é obrigatório',
+        emailInvalid: 'Formato de e-mail inválido',
+        messageRequired: 'A mensagem é obrigatória',
+        messageMinLength: 'A mensagem deve ter no mínimo 50 caracteres',
     },
 };
