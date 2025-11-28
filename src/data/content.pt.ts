@@ -3,71 +3,23 @@ import { Achievement, Content, Project, TechCategory, Testimonial, Timeline } fr
 
 export const projects: Project[] = [
     {
-        id: 'ecommerce-platform',
-        title: 'Plataforma E-commerce',
-        description:
-            'Uma solução completa de e-commerce desenvolvida para transformar a experiência de compra online.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['React', 'Node.js', 'PostgreSQL'],
-        fullDescription: `Este projeto foi desenvolvido para uma empresa de médio porte que precisava modernizar sua presença online. O desafio principal foi criar uma experiência de usuário fluida enquanto mantinha alta performance e segurança.
+        id: 'rocketpay',
+        title: 'RocketPay',
+        description: 'Gerador de cartão virtual desenvolvido durante o Explorer Lab da Rocketseat.',
+        image: 'https://user-images.githubusercontent.com/96635074/196974349-1f579c57-7789-4409-a135-1e31bb68363b.png',
+        cardTechs: ['JavaScript'],
+        fullDescription: `Projeto desenvolvido durante o Explorer Lab da Rocketseat, focado no aprimoramento de lógica e manipulação do DOM em JavaScript.
 
-Implementei funcionalidades avançadas como:
-- Carrinho de compras com persistência
-- Sistema de cupons e descontos
-- Integração com múltiplos métodos de pagamento
-- Dashboard administrativo com analytics em tempo real
-- Sistema de reviews e avaliações
-- Notificações por email automatizadas
-- Gerenciamento de múltiplos vendedores
+Principais características:
+- Geração dinâmica de um cartão de crédito virtual
+- Validação e formatação automática dos dados inseridos
+- Interface simples, responsiva e intuitiva
+- Aplicação de máscaras em tempo real para inputs
 
-O resultado foi um aumento de 150% nas vendas online nos primeiros 3 meses após o lançamento.`,
-        allTechs: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis', 'Docker'],
-        liveUrl: '#',
-        githubUrl: '#',
-    },
-    {
-        id: 'task-manager',
-        title: 'Gerenciador de Tarefas',
-        description:
-            'Aplicativo completo de produtividade focado em colaboração em equipe e gestão eficiente de projetos.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['Next.js', 'TypeScript', 'Supabase'],
-        fullDescription: `Uma ferramenta completa para gestão de tarefas e projetos, desenvolvida com foco em colaboração e produtividade.
-
-Recursos principais:
-- Sistema de arrastar e soltar para organização de tarefas
-- Notificações em tempo real
-- Atribuição de tarefas com prazos e prioridades
-- Sistema de comentários e anexos
-- Integração com calendário
-- Relatórios de produtividade
-
-A aplicação foi desenvolvida pensando em times ágeis e oferece uma interface intuitiva que facilita a comunicação e o acompanhamento de projetos.`,
-        allTechs: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Framer Motion'],
-        liveUrl: '#',
-        githubUrl: '#',
-    },
-    {
-        id: 'portfolio-website',
-        title: 'Portfolio Pessoal',
-        description:
-            'Site de portfólio moderno e responsivo desenvolvido com as melhores práticas de desenvolvimento web.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['React', 'TypeScript', 'Tailwind CSS'],
-        fullDescription: `Um portfólio pessoal desenvolvido com foco em design minimalista e performance. O site apresenta animações suaves, design responsivo e otimização para SEO.
-
-Características principais:
-- Design moderno e clean
-- Animações suaves com Framer Motion
-- Totalmente responsivo
-- Otimizado para performance
-- Acessibilidade (WCAG 2.1)
-- Dark mode com transições suaves
-
-O projeto demonstra habilidades em design de interface, desenvolvimento front-end e otimização de performance.`,
-        allTechs: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
-        liveUrl: '#',
-        githubUrl: '#',
+Um projeto pequeno, mas fundamental no início da minha jornada, consolidando conceitos importantes de JavaScript e desenvolvimento front-end.`,
+        allTechs: ['HTML', 'CSS', 'JavaScript'],
+        liveUrl: 'https://rocketpay-smoky.vercel.app',
+        githubUrl: 'https://github.com/arturbomtempo-dev/rocket-pay',
     },
 ];
 
@@ -135,16 +87,18 @@ export const contents: Content[] = [
 export const achievements: Achievement[] = [
     {
         icon: Trophy,
-        title: '10+ Prêmios',
-        description: 'Reconhecimentos recebidos',
+        title: 'Prêmios e Reconhecimentos',
+        description: 'Destaques acadêmicos e profissionais',
         fullDescription:
-            'Ao longo da minha jornada acadêmica e profissional, tive a honra de receber diversos prêmios e reconhecimentos que validam meu esforço, dedicação e excelência técnica. Cada conquista representa um marco importante no meu desenvolvimento como desenvolvedor e profissional.',
+            'Ao longo da minha trajetória acadêmica, profissional e voluntária, tive a oportunidade de participar de iniciativas e projetos que resultaram em alguns prêmios e reconhecimentos. Cada conquista representa momentos importantes de aprendizado e evolução, reforçando meu compromisso com dedicação e melhoria contínua.',
         details: [
-            'Ganhador invicto do prêmio "The Best" promovido pelo Colégio Cotemig',
-            'Reconhecimento por excelência acadêmica em disciplinas de programação',
-            'Premiações em hackathons e competições de desenvolvimento',
-            'Destaque em projetos acadêmicos e iniciativas estudantis',
-            'Reconhecimento por contribuições em projetos open source',
+            '7x premiado como "The Best of the Class" no Colégio Cotemig, por maior média global do semestre',
+            '1º lugar no programa Cotemig Startups com a equipe QuickFood Technologies',
+            'Certificação de Membro Níveis 1, 2 e 3 do WebTech Network',
+            'Melhor Trabalho Interdisciplinar do 1º período no curso de Ciência da Computação – PUC Minas',
+            'Melhor Trabalho Interdisciplinar do 2º período no curso de Engenharia de Software – PUC Minas',
+            '1º lugar na competição interna de aprendizado na White Wall',
+            '2x reconhecido como Voluntário Destaque da Comunicação na Igreja Batista Central',
         ],
     },
     {
@@ -152,7 +106,7 @@ export const achievements: Achievement[] = [
         title: '4+ Anos',
         description: 'Anos de Experiência',
         fullDescription:
-            'Minha trajetória profissional começou em 2023 e desde então venho acumulando experiências valiosas em diversas áreas do desenvolvimento de software. Trabalhei com diferentes tecnologias, metodologias e equipes, sempre buscando entregar soluções de qualidade e aprender continuamente.',
+            'Minha trajetória na tecnologia começou em 2021 e desde então venho acumulando experiências valiosas em diversas áreas do desenvolvimento de software. Trabalhei com diferentes tecnologias, metodologias e equipes, sempre buscando entregar soluções de qualidade e aprender continuamente.',
         details: [
             'Experiência em desenvolvimento full stack com foco em React e Node.js',
             'Atuação em startups e empresas de médio e grande porte',
@@ -163,16 +117,16 @@ export const achievements: Achievement[] = [
     },
     {
         icon: Presentation,
-        title: '5+ Palestras',
-        description: 'Workshops e cursos ministrados',
+        title: '7+ Palestras',
+        description: 'Compartilhando conhecimento e formando novos talentos',
         fullDescription:
-            'Acredito que compartilhar conhecimento é fundamental para o crescimento da comunidade tech. Por isso, venho ministrando palestras, workshops e cursos sobre desenvolvimento de software, compartilhando experiências e ajudando outros desenvolvedores em sua jornada.',
+            'Tenho grande interesse por ensino e pela troca de conhecimento. Ao longo da minha trajetória, ministrei palestras, workshops e encontros educativos em eventos de diferentes tamanhos, sempre buscando contribuir com a formação de novos profissionais e incentivar a comunidade a evoluir em conjunto.',
         details: [
-            'Palestras em eventos como DevFest, meetups e conferências',
-            'Workshops de React.js, Next.js e desenvolvimento front-end',
-            'Cursos de Backend com Java, Spring Boot e Node.js',
-            'Mentoria técnica para novos integrantes do WebTech Network',
-            'Apresentações sobre boas práticas e arquitetura de software',
+            'Workshops por dois anos consecutivos no DevFest BH, maior evento de tecnologia da cidade, promovido pelo Google Developers Group.',
+            'Palestras na Escola de Férias de Ciência da Computação da PUC Minas',
+            'Encontros e formações como Chapter Lead no WebTech Network',
+            'Jornada Back-end do WebTech Network em parceria com a LEVTY, com mais de 500 inscritos',
+            'Professor voluntário de HTML, CSS, Python e Scratch no projeto Code Club',
         ],
     },
 ];

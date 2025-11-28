@@ -31,7 +31,7 @@ export function Projects() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
                     {projects.map((project) => (
-                        <Card 
+                        <Card
                             key={project.id}
                             className="project-card overflow-hidden h-full cursor-pointer group hover:shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/10 transition-all duration-300"
                             onClick={() => setSelectedProject(project)}
@@ -74,6 +74,49 @@ export function Projects() {
                             <DialogDescription className="text-base text-muted-foreground">
                                 {selectedProject?.description}
                             </DialogDescription>
+                            {(selectedProject?.liveUrl || selectedProject?.githubUrl) && (
+                                <div className="flex gap-3 pt-1">
+                                    {selectedProject?.liveUrl &&
+                                        selectedProject.liveUrl !== '#' && (
+                                            <Button
+                                                onClick={() =>
+                                                    window.open(selectedProject.liveUrl, '_blank')
+                                                }
+                                                size="sm"
+                                                className="gap-2 bg-primary text-primary-foreground hover:bg-background hover:border"
+                                            >
+                                                <ExternalLink className="w-4 h-4" />
+                                                <span>
+                                                    {language === 'pt'
+                                                        ? 'Ver Projeto'
+                                                        : language === 'en'
+                                                          ? 'View Project'
+                                                          : 'Ver Proyecto'}
+                                                </span>
+                                            </Button>
+                                        )}
+                                    {selectedProject?.githubUrl &&
+                                        selectedProject.githubUrl !== '#' && (
+                                            <Button
+                                                onClick={() =>
+                                                    window.open(selectedProject.githubUrl, '_blank')
+                                                }
+                                                size="sm"
+                                                variant="outline"
+                                                className="gap-2"
+                                            >
+                                                <Github className="w-4 h-4" />
+                                                <span>
+                                                    {language === 'pt'
+                                                        ? 'Ver Código'
+                                                        : language === 'en'
+                                                          ? 'View Code'
+                                                          : 'Ver Código'}
+                                                </span>
+                                            </Button>
+                                        )}
+                                </div>
+                            )}
                             <div className="relative overflow-hidden rounded-lg aspect-video border border-border/50">
                                 <img
                                     src={selectedProject?.image}
@@ -111,37 +154,6 @@ export function Projects() {
                                     ))}
                                 </div>
                             </div>
-                            {(selectedProject?.liveUrl || selectedProject?.githubUrl) && (
-                                <div className="flex gap-3 pt-4">
-                                    {selectedProject?.liveUrl && selectedProject.liveUrl !== '#' && (
-                                        <Button
-                                            onClick={() => window.open(selectedProject.liveUrl, '_blank')}
-                                            className="flex-1"
-                                        >
-                                            <ExternalLink className="w-4 h-4 mr-2" />
-                                            {language === 'pt'
-                                                ? 'Ver Projeto'
-                                                : language === 'en'
-                                                  ? 'View Project'
-                                                  : 'Ver Proyecto'}
-                                        </Button>
-                                    )}
-                                    {selectedProject?.githubUrl && selectedProject.githubUrl !== '#' && (
-                                        <Button
-                                            onClick={() => window.open(selectedProject.githubUrl, '_blank')}
-                                            variant="outline"
-                                            className="flex-1"
-                                        >
-                                            <Github className="w-4 h-4 mr-2" />
-                                            {language === 'pt'
-                                                ? 'Ver Código'
-                                                : language === 'en'
-                                                  ? 'View Code'
-                                                  : 'Ver Código'}
-                                        </Button>
-                                    )}
-                                </div>
-                            )}
                         </div>
                     </DialogContent>
                 </Dialog>
