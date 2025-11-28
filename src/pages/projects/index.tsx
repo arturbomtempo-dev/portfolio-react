@@ -83,7 +83,7 @@ export function Projects() {
                                                     window.open(selectedProject.liveUrl, '_blank')
                                                 }
                                                 size="sm"
-                                                className="gap-2 bg-primary text-primary-foreground hover:bg-background hover:border"
+                                                className="gap-2 bg-primary text-primary-foreground hover:bg-foreground hover:text-background"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
                                                 <span>

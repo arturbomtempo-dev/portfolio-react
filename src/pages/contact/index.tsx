@@ -153,7 +153,7 @@ export function Contact() {
                                 placeholder={t.contact.namePlaceholder}
                                 className={`bg-muted/30 transition-colors ${
                                     errors.name
-                                        ? 'border-red-500 focus-visible:ring-red-500'
+                                        ? 'border-red-500 border-2 focus-visible:ring-0 focus-visible:border-red-600'
                                         : 'border-border/50 focus-visible:ring-primary'
                                 }`}
                                 aria-invalid={errors.name ? 'true' : 'false'}
@@ -176,7 +176,7 @@ export function Contact() {
                                 placeholder={t.contact.emailPlaceholder}
                                 className={`bg-muted/30 transition-colors ${
                                     errors.email
-                                        ? 'border-red-500 focus-visible:ring-red-500'
+                                        ? 'border-red-500 border-2 focus-visible:ring-0 focus-visible:border-red-600'
                                         : 'border-border/50 focus-visible:ring-primary'
                                 }`}
                                 aria-invalid={errors.email ? 'true' : 'false'}
@@ -199,7 +199,7 @@ export function Contact() {
                                 rows={6}
                                 className={`bg-muted/30 resize-none transition-colors ${
                                     errors.message
-                                        ? 'border-red-500 focus-visible:ring-red-500'
+                                        ? 'border-red-500 border-2 focus-visible:ring-0 focus-visible:border-red-600'
                                         : 'border-border/50 focus-visible:ring-primary'
                                 }`}
                                 aria-invalid={errors.message ? 'true' : 'false'}
