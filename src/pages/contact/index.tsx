@@ -73,10 +73,15 @@ export function Contact() {
     };
 
     const socialLinks = [
-        { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-primary' },
+        {
+            icon: Github,
+            href: 'https://github.com/arturbomtempo-dev',
+            label: 'GitHub',
+            color: 'hover:text-primary',
+        },
         {
             icon: Linkedin,
-            href: '#',
+            href: 'https://www.linkedin.com/in/artur-bomtempo/',
             label: 'LinkedIn',
             color: 'hover:text-blue-500',
         },
@@ -88,11 +93,16 @@ export function Contact() {
         },
         {
             icon: Instagram,
-            href: '#',
+            href: 'https://www.instagram.com/arturbomtempo.dev/',
             label: 'Instagram',
             color: 'hover:text-pink-500',
         },
-        { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-600' },
+        {
+            icon: Youtube,
+            href: 'https://www.youtube.com/@ArturBomtempoDev',
+            label: 'YouTube',
+            color: 'hover:text-red-600',
+        },
     ];
 
     return (
