@@ -41,18 +41,21 @@ export function Contact() {
     const onSubmit = async (data: ContactFormData) => {
         setIsLoading(true);
 
-        const formData = new FormData();
-        formData.append('name', data.name);
-        formData.append('email', data.email);
-        formData.append('message', data.message);
-
         try {
-            const response = await fetch('https://formsubmit.co/arturbcolen@gmail.com', {
+            const response = await fetch('https://formsubmit.co/ajax/arturbcolen@gmail.com', {
                 method: 'POST',
-                body: formData,
                 headers: {
+                    'Content-Type': 'application/json',
                     Accept: 'application/json',
                 },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.message,
+                    _captcha: 'false',
+                    _template: 'table',
+                    _subject: 'Nova mensagem do portfólio!',
+                }),
             });
 
             if (response.ok) {
@@ -134,15 +137,6 @@ export function Contact() {
 
                 <Card className="project-card p-6 sm:p-8 animate-fade-in max-w-full sm:max-w-4xl mx-auto">
                     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
-                        <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_template" value="table" />
-                        <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
-                        <input
-                            type="hidden"
-                            name="_autoresponse"
-                            value="Obrigado pela sua mensagem! Entrarei em contato em breve."
-                        />
-
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2">
                                 {t.contact.name}
