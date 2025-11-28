@@ -351,12 +351,43 @@ Um projeto pequeno, mas fundamental no início da minha jornada, consolidando co
 export const contents: Content[] = [
     {
         type: 'newsletter',
-        title: 'Debugging Thoughts',
+        title: 'Automação de Processos',
+        description: 'Como automatizar tarefas repetitivas para ganhar produtividade no dia a dia.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQGmY4FMbcE33g/article-cover_image-shrink_720_1280/B4DZqXh54pG8AM-/0/1763478846119?e=1766016000&v=beta&t=z2t8azcXmyaae8sHcp5H77cKNSDVRp_-flkgf_-waUs',
+        url: 'https://www.linkedin.com/pulse/automa%C3%A7%C3%A3o-de-processos-o-poder-fazer-computador-por-voc%C3%AA-bomtempo-8qtgf/',
+        platform: 'LinkedIn',
+        date: '2025-11-18',
+    },
+    {
+        type: 'newsletter',
+        title: 'Além da Tecnologia',
+        description: 'A importância de dominar fundamentos antes de escolher stacks e frameworks.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQH6c888A3glCg/article-cover_image-shrink_720_1280/B4DZqEJk36HwAI-/0/1763153701095?e=1766016000&v=beta&t=iZlgyCMBXZu6yj5y7oFuhBAMcIG-jts9OD4OUpVfons',
+        url: 'https://www.linkedin.com/pulse/al%C3%A9m-da-tecnologia-por-que-dominar-fundamentos-vale-mais-bomtempo-8q0lf/',
+        platform: 'LinkedIn',
+        date: '2025-11-14',
+    },
+    {
+        type: 'newsletter',
+        title: 'Segurança além do óbvio',
         description:
-            'Reflexões e aprendizados sobre engenharia de software, carreira e o dia a dia no desenvolvimento.',
+            'Como pequenas brechas de segurança podem gerar grandes riscos em aplicações reais.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQE1on-G0TWjOg/article-cover_image-shrink_720_1280/B4DZpZtHILGsAQ-/0/1762441595349?e=1766016000&v=beta&t=A4_zmBWQBwuZQhi5S_UubiiK5jOpldNt0B54cRy34QE',
+        url: 'https://www.linkedin.com/pulse/seguran%C3%A7a-al%C3%A9m-do-%C3%B3bvio-pequenas-brechas-grandes-artur-bomtempo-colen-glulf/',
+        platform: 'LinkedIn',
+        date: '2025-11-06',
+    },
+    {
+        type: 'newsletter',
+        title: 'Design Patterns e Boas Soluções',
+        description:
+            'Reflexões sobre como padrões de projeto influenciam a escrita de códigos mais eficientes e sustentáveis.',
         thumbnail:
             'https://media.licdn.com/dms/image/v2/D4D12AQFPPGoftiRMIA/article-cover_image-shrink_720_1280/B4DZo104fBHsAI-/0/1761839654632?e=1766016000&v=beta&t=gEGmYMpz22XcB2vV4AgWytQFGStG1RCt-6TujhXHsSg',
-        url: 'https://www.linkedin.com/newsletters/7389634213962125312/',
+        url: 'https://www.linkedin.com/pulse/design-patterns-e-o-que-eles-nos-ensinam-sobre-boas-bomtempo-colen-ji2se/',
         platform: 'LinkedIn',
         date: '2025-10-30',
     },
