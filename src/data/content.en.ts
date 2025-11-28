@@ -3,148 +3,498 @@ import { Achievement, Content, Project, TechCategory, Testimonial, Timeline } fr
 
 export const projects: Project[] = [
     {
-        id: 'ecommerce-platform',
-        title: 'E-Commerce Platform',
+        id: 'portfolio',
+        title: 'Personal Portfolio — Artur Bomtempo',
         description:
-            'A complete e-commerce solution developed to transform the online shopping experience.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['React', 'Node.js', 'PostgreSQL'],
-        fullDescription: `This project was developed for a medium-sized company that needed to modernize its online presence. The main challenge was to create a fluid user experience while maintaining high performance and security.
+            'Personal website developed to showcase my trajectory, skills, and main projects.',
+        image: 'https://github.com/user-attachments/assets/bb40b211-79a4-45ea-8ba9-5f1bac978299',
+        cardTechs: ['React', 'TypeScript'],
+        fullDescription: `This portfolio was developed with the goal of presenting my main skills, experiences, projects, and initiatives in the technology area in a clear and professional manner. The platform gathers information about my trajectory, my work in academic and professional projects, and highlights content such as workshops, awards, and publications.
 
-I implemented advanced features such as:
-- Persistent shopping cart
-- Coupon and discount system
-- Integration with multiple payment methods
-- Administrative dashboard with real-time analytics
-- Review and rating system
-- Automated email notifications
-- Multi-vendor management
-
-The result was a 150% increase in online sales in the first 3 months after launch.`,
-        allTechs: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis', 'Docker'],
-        liveUrl: '#',
-        githubUrl: '#',
-    },
-    {
-        id: 'task-manager',
-        title: 'Task Manager',
-        description:
-            'Complete productivity application focused on team collaboration and efficient project management.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['Next.js', 'TypeScript', 'Supabase'],
-        fullDescription: `A complete tool for task and project management, developed with a focus on collaboration and productivity.
+The website's construction was designed to reflect my identity as a developer, offering fluid, modern, and accessible navigation.
 
 Key features:
-- Drag and drop system for task organization
-- Real-time notifications
-- Task assignment with deadlines and priorities
-- Comments and attachments system
-- Calendar integration
-- Productivity reports
+- Sections dedicated to projects, career, education, and achievements
+- Responsive and organized interface, focused on clarity and user experience
+- Modular structure that facilitates content maintenance and expansion
+- Clean and coherent design, reinforcing professionalism and visual identity
+- Authorial content written to convey authenticity and confidence
 
-The application was developed with agile teams in mind and offers an intuitive interface that facilitates communication and project tracking.`,
-        allTechs: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Framer Motion'],
-        liveUrl: '#',
-        githubUrl: '#',
+A personal project that consolidates my mastery of modern front-end development and presents my work professionally.`,
+        allTechs: ['React', 'TypeScript', 'Zod', 'Tailwind CSS', 'Lucide React'],
+        liveUrl: 'https://www.arturbomtempo.dev/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/portfolio',
     },
     {
-        id: 'portfolio-website',
-        title: 'Personal Portfolio',
+        id: 'gdg-bh-2025',
+        title: 'GDG Belo Horizonte 2025 Website',
         description:
-            'Modern and responsive portfolio website developed with web development best practices.',
-        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/main/resources/screenshots/main-section.png',
-        cardTechs: ['React', 'TypeScript', 'Tailwind CSS'],
-        fullDescription: `A personal portfolio developed with a focus on minimalist design and performance. The site features smooth animations, responsive design, and SEO optimization.
+            'Official website for Google Developers Group Belo Horizonte, featuring events, talks, and community information.',
+        image: 'https://raw.githubusercontent.com/arturbomtempo-dev/devfest-bh-website/refs/heads/main/resources/screenshots/gdgbh25.png',
+        cardTechs: ['React', 'TypeScript'],
+        fullDescription: `This project consists of developing the new official website for Google Developers Group (GDG) Belo Horizonte for the year 2025. The platform presents community events, previous talks, institutional information, and content about the organization, offering a modern and accessible experience for developers interested in the GDG ecosystem.
+
+My contribution was directly linked to front-end development, ensuring a clear, responsive interface aligned with the community's visual identity.
 
 Key features:
-- Modern and clean design
-- Smooth animations with Framer Motion
-- Fully responsive
-- Performance optimized
-- Accessibility (WCAG 2.1)
-- Dark mode with smooth transitions
+- Official page with updated information about GDG Belo Horizonte
+- Section dedicated to community events and meetings
+- History of talks and content previously presented
+- Modern, responsive interface based on reusable components
+- Structure designed to highlight relevant information and facilitate navigation
 
-The project demonstrates skills in interface design, front-end development, and performance optimization.`,
-        allTechs: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
+A project developed in collaboration to strengthen the digital presence of one of the region's main technology communities.`,
+        allTechs: ['React', 'TypeScript', 'Tailwind CSS'],
+        liveUrl: 'https://gdgbh.com.br/',
+        githubUrl: 'https://github.com/gdg-bh/site-oficial',
+    },
+    {
+        id: 'link-in-bio',
+        title: 'Link in Bio',
+        description:
+            'Educational project developed to teach basic concepts of React, TypeScript, and Styled Components.',
+        image: 'https://github.com/user-attachments/assets/30e30fe2-0958-41e6-b6d9-71e385d66316',
+        cardTechs: ['React', 'TypeScript'],
+        fullDescription: `This project was created as part of a YouTube tutorial with the goal of teaching, in a practical and accessible way, the fundamentals of React, TypeScript, and Styled Components. The application demonstrates the complete process of building a Link in Bio — a page that centralizes important links such as social networks, portfolio, and contact information.
+
+Key features:
+- Profile display with name, photo, and brief description
+- Fully customizable list of links
+- Social media icons with direct access
+- Responsive interface adapted for use on mobile devices
+- Project created with an educational focus, guiding beginners in building applications with React
+
+A simple and functional solution, ideal for those who want to learn modern front-end development while creating their own link page.`,
+        allTechs: ['React', 'TypeScript', 'Styled Components', 'Vite'],
+        liveUrl: 'https://www.links.arturbomtempo.dev/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/link-in-bio-react-youtube-tutorial',
+    },
+    {
+        id: 'studio-ghibli-api',
+        title: 'Studio Ghibli API React App',
+        description:
+            'Application developed as an educational project to teach React during PUC Minas Summer School.',
+        image: 'https://github.com/user-attachments/assets/208932f4-4060-49f7-9bb7-f4d3247f0d78',
+        cardTechs: ['React', 'TypeScript'],
+        fullDescription: `Project developed for the PUC Minas Computer Science Summer School in 2025, with the goal of teaching beginner students to build complete React applications. The application consumes data from the Studio Ghibli API to display a collection of films, offering a practical and guided experience in modern front-end development.
+
+Key features:
+- Listing of Studio Ghibli films with general information
+- Fluid navigation between pages and sections of the application
+- Organized, responsive interface easy for beginners to understand
+- Project used as a basis for teaching essential React fundamentals
+- Practice-oriented approach, focusing on component construction, routes, and API consumption
+
+A project with an educational purpose, created to facilitate learning modern web development through a real and engaging example.`,
+        allTechs: [
+            'React',
+            'TypeScript',
+            'Axios',
+            'React Router DOM',
+            'React Icons',
+            'Tailwind CSS',
+            'Prettier',
+        ],
+        liveUrl: 'https://studio-ghibli-react.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/react-app-workshop',
+    },
+    {
+        id: 'devfest-bh-2024',
+        title: 'DevFest BH 2024 Website',
+        description:
+            'Official website developed for the largest technology event in Belo Horizonte, promoted by Google Developers Group.',
+        image: 'https://github.com/user-attachments/assets/1b43e564-ae07-4bdf-a6ec-92f5884e2b12',
+        cardTechs: ['Next.js', 'TypeScript'],
+        fullDescription: `Platform developed by me and part of the WebTech Network team for Google Developers Group Belo Horizonte, serving as the official website for DevFest BH 2024 — the city's largest technology event. The goal was to create a complete experience for participants, with information, schedule, location, partners, and registration link.
+
+Key features:
+- Official event page with its own visual identity and updated content
+- Access to registration page and direction to the credentialing system
+- Display of complete schedule, talks, and event tracks
+- Dedicated sections for sponsors, media kit, and institutional information
+- Dynamic countdown and essential information for participants
+- Responsive, fast interface optimized for SEO
+- Developed in collaboration with a multidisciplinary team from WebTech Network
+
+A high-impact project, delivered in partnership with GDG BH, focused on quality, performance, and user experience.`,
+        allTechs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Lucide React'],
+        liveUrl: 'https://demo-devfestbh-2024.vercel.app',
+        githubUrl: 'https://github.com/arturbomtempo-dev/devfest-bh-website',
+    },
+    {
+        id: 'planner',
+        title: 'plann.er',
+        description:
+            'Complete travel itinerary platform developed during Rocketseat\'s NLW Journey.',
+        image: 'https://github.com/user-attachments/assets/18dbb5f1-7a6b-4972-b26a-6a742fe5bf66',
+        cardTechs: ['Node.js', 'React', 'TypeScript'],
+        fullDescription: `Project developed during Rocketseat's NLW Journey event, with the goal of consolidating modern web development concepts, both on the front-end and back-end. The platform simulates a complete travel organization system, allowing management of participants, activities, and itinerary details.
+
+Key features:
+- Trip registration and creation of personalized invitations
+- Registration and listing of trip activities
+- Attendance confirmation and participant management
+- Detailed display of trip information
+- Structured API with validation, link-based authentication, and email sending
+- Modern, responsive interface that is easy to navigate
+
+The project presents a solid set of core functionalities, with complete backend routes, and served as an in-depth study of web architecture, front-back integration, and best practices with TypeScript.`,
+        allTechs: [
+            'Node.js',
+            'TypeScript',
+            'Fastify',
+            'Prisma',
+            'React',
+            'Axios',
+            'Tailwind CSS',
+            'Nodemailer',
+            'Day.js',
+            'Zod',
+        ],
         liveUrl: '#',
-        githubUrl: '#',
+        githubUrl: 'https://github.com/arturbomtempo-dev/plann.er',
+    },
+    {
+        id: 'craftapi',
+        title: 'CraftAPI',
+        description:
+            'Application created to list Minecraft mobs, items, and ores by consuming a custom API.',
+        image: 'https://github.com/user-attachments/assets/ad0c5022-a10e-49c1-9fab-2a29ea027c59',
+        cardTechs: ['React', 'Node.js'],
+        fullDescription: `Project developed in the Frameworks course of the technical web and mobile development program, focusing on consolidating studies of React Hooks and API consumption. The application displays detailed information about Minecraft mobs, equipment, and ores, using an API developed by the pair responsible for the project.
+
+Key features:
+- Complete listing of Minecraft mobs, items, and ores
+- Display of details when selecting each element
+- Direct integration with a custom API built exclusively for the project
+- Responsive and organized interface to facilitate navigation
+- Project created in pairs, uniting front-end and back-end in a unified ecosystem
+
+An essential project to reinforce React practices, API consumption logic, and collaborative development.`,
+        allTechs: ['JavaScript', 'TypeScript', 'Node.js', 'React', 'Express.js', 'MongoDB'],
+        liveUrl: 'https://craft-api.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/craft-api',
+    },
+    {
+        id: 'in-kids',
+        title: 'I&N Kids',
+        description:
+            'Platform created to help parents reduce children\'s screen time and encourage offline activities.',
+        image: 'https://github.com/user-attachments/assets/82627220-3445-4de3-a4e1-908f432034a9',
+        cardTechs: ['HTML', 'CSS', 'JavaScript'],
+        fullDescription: `I&N Kids was developed during the first semester of college, focusing on initial front-end development learning. The platform aims to help parents find healthy and educational alternatives to reduce children's screen time, promoting offline activities and greater family interaction.
+
+Key features:
+- Content and guidance to reduce excessive device use
+- Offline activities designed for different age groups
+- Simple, intuitive, and accessible interface for parents and guardians
+- Encouragement of balance between technology and active life
+- Project built as a team as part of an interdisciplinary assignment
+
+An important application for consolidating front-end fundamentals and good development practices at the beginning of the academic journey.`,
+        allTechs: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Bootstrap',
+            'jQuery',
+            'Node.js',
+            'TypeScript',
+            'Express.js',
+            'MongoDB',
+            'Blip',
+        ],
+        liveUrl: 'https://iandn-kids.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/iandn-kids',
+    },
+    {
+        id: 'christmas-chat',
+        title: 'Christmas Chat',
+        description:
+            'Interactive chatbot and website created to share Christmas and New Year messages in a personalized way.',
+        image: 'https://github.com/ArturColen/ChristmasChat/assets/96635074/080a1c76-0275-4834-a3ad-afa1c220f698',
+        cardTechs: ['TypeScript', 'Node.js', 'Blip'],
+        fullDescription: `Project developed to allow the sharing of Christmas messages in an interactive way, combining a chatbot with a themed website. Each user accesses the content through a unique code, which retrieves their data from the API and displays a personalized page.
+
+Key features:
+- Interactive chatbot with themed options and festive content
+- Personalized page generated from a user-provided code
+- Conversational flows including quiz, playlist, and message sending
+- Complete integration between chatbot, API, and main website
+- Experience designed to be fun, intuitive, and accessible
+
+A remarkable project that combined interface creation, API logic, and conversational experience design.`,
+        allTechs: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'TypeScript',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'Blip',
+        ],
+        liveUrl:
+            'https://artur-bomtempo-colen-4htrp.chat.blip.ai/?appKey=bmF0YWxpbmE6NzJiZGE3MDYtMmY3ZS00Y2NmLWFlMzItNzQ2NTBlMDZlOGNh',
+        githubUrl: 'https://github.com/arturbomtempo-dev/christmas-chat',
+    },
+    {
+        id: 'netflix-homepage',
+        title: "Netflix's Homepage",
+        description:
+            'Clone of Netflix\'s homepage developed to consolidate Front-end fundamentals.',
+        image: 'https://user-images.githubusercontent.com/96635074/208282907-fa614507-2d83-4b1f-a7be-cc038cabeb61.png',
+        cardTechs: ['Node.js'],
+        fullDescription: `Project developed in a Digital Innovation One class with the goal of practicing essential Front-end concepts and introducing initial studies with Node.js. The application recreates Netflix's homepage, displaying lists of categorized movies.
+
+Key features:
+- Interface inspired by Netflix's original layout
+- Movie sections organized by categories
+- Responsive design compatible with different devices
+- Ideal structure for consolidating front-end knowledge and basic logic
+
+A simple yet fundamental project in the web development evolution process.`,
+        allTechs: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+        liveUrl: 'https://netflix-artur.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/netflix-clone',
+    },
+    {
+        id: 'inverted-world',
+        title: 'Inverted World Landing Page',
+        description:
+            'Themed landing page inspired by Stranger Things Season 4, created during DIO\'s Front-end Week.',
+        image: 'https://user-images.githubusercontent.com/96635074/195481231-2a82fd4e-3547-42e8-9556-df96160db140.png',
+        cardTechs: ['JavaScript'],
+        fullDescription: `Project developed during Digital Innovation One's Front-end Week, with the goal of creating a themed landing page about Stranger Things Season 4 and reinforcing fundamental HTML, CSS, and JavaScript concepts.
+
+Key features:
+- Page dedicated to the series' universe, focusing on the Upside Down
+- Content presented in a visually attractive and responsive way
+- Form integrated with a database for storing messages
+- Animations and interactive sections that enrich navigation
+
+An ideal project for improving front-end knowledge and basic integration with external services.`,
+        allTechs: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+        liveUrl: 'https://inverted-world-artur-bomtempo.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/inverted-world',
+    },
+    {
+        id: 'christmas-website',
+        title: 'Christmas Website',
+        description:
+            'Interactive website created to convey the meaning of Christmas in a light and engaging way.',
+        image: 'https://user-images.githubusercontent.com/96635074/209454790-2a5ffb1c-d8cd-4c59-8d80-1ef847e91517.png',
+        cardTechs: ['JavaScript'],
+        fullDescription: `Project developed with the goal of creating a themed and interactive page to share the meaning of Christmas in a creative way.
+
+Key features:
+- Themed layout with smooth animations and scroll effects
+- Informative sections presented in an engaging manner
+- Visual effects that enrich the user experience
+- Simple, intuitive, and responsive navigation
+
+A project focused on improving front-end skills, animations, and building more dynamic interfaces.`,
+        allTechs: ['HTML', 'CSS', 'JavaScript', 'Parallax', 'GSAP', 'ScrollReveal'],
+        liveUrl: 'https://christmas22.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/christmas-website',
+    },
+    {
+        id: 'goodtimegpt',
+        title: 'ChatGPT Clone',
+        description:
+            'Functional ChatGPT clone built for studying web development and AI API integration.',
+        image: 'https://github.com/ArturColen/GoodtimeGPT/assets/96635074/6a770738-16dc-4bb0-b20d-8d71539519e2',
+        cardTechs: ['React', 'Next.js', 'Node.js'],
+        fullDescription: `Project developed as part of a B7Web course with the goal of deepening knowledge in JavaScript, TypeScript, and modern web development. The application reproduces ChatGPT's behavior, consuming the OpenAI API to generate real-time responses.
+
+Key features:
+- Intuitive interface inspired by the ChatGPT experience
+- Real-time communication with OpenAI API
+- Message history and continuous conversation flow
+- Modern and responsive layout
+- Ideal project for consolidating API integration fundamentals and building reactive UIs
+
+Note: to run locally, you need to configure an OpenAI API key in the .env file.`,
+        allTechs: [
+            'JavaScript',
+            'TypeScript',
+            'Node.js',
+            'React',
+            'Next.js',
+            'Tailwind CSS',
+            'OpenAI API',
+        ],
+        liveUrl: 'https://goodtimegpt.vercel.app/',
+        githubUrl: 'https://github.com/arturbomtempo-dev/GoodtimeGPT.git',
+    },
+    {
+        id: 'rocketpay',
+        title: 'RocketPay',
+        description: 'Virtual card generator developed during Rocketseat\'s Explorer Lab.',
+        image: 'https://user-images.githubusercontent.com/96635074/196974349-1f579c57-7789-4409-a135-1e31bb68363b.png',
+        cardTechs: ['JavaScript'],
+        fullDescription: `Project developed during Rocketseat's Explorer Lab, focused on improving logic and DOM manipulation in JavaScript.
+
+Key features:
+- Dynamic generation of a virtual credit card
+- Automatic validation and formatting of entered data
+- Simple, responsive, and intuitive interface
+- Real-time mask application for inputs
+
+A small but fundamental project at the beginning of my journey, consolidating important JavaScript and front-end development concepts.`,
+        allTechs: ['HTML', 'CSS', 'JavaScript'],
+        liveUrl: 'https://rocketpay-smoky.vercel.app',
+        githubUrl: 'https://github.com/arturbomtempo-dev/rocket-pay',
     },
 ];
 
 export const contents: Content[] = [
     {
-        type: 'video',
-        title: 'Introduction to React Hooks',
-        description: 'Learn to use the main React hooks in a practical and efficient way.',
+        type: 'newsletter',
+        title: 'Process Automation',
+        description: 'How to automate repetitive tasks to boost daily productivity.',
         thumbnail:
-            'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=450&fit=crop',
-        url: '#',
-        platform: 'YouTube',
-        date: '2024-01-15',
+            'https://media.licdn.com/dms/image/v2/D4D12AQGmY4FMbcE33g/article-cover_image-shrink_720_1280/B4DZqXh54pG8AM-/0/1763478846119?e=1766016000&v=beta&t=z2t8azcXmyaae8sHcp5H77cKNSDVRp_-flkgf_-waUs',
+        url: 'https://www.linkedin.com/pulse/automa%C3%A7%C3%A3o-de-processos-o-poder-fazer-computador-por-voc%C3%AA-bomtempo-8qtgf/',
+        platform: 'LinkedIn',
+        date: '2025-11-18',
+    },
+    {
+        type: 'newsletter',
+        title: 'Beyond Technology',
+        description: 'The importance of mastering fundamentals before choosing stacks and frameworks.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQH6c888A3glCg/article-cover_image-shrink_720_1280/B4DZqEJk36HwAI-/0/1763153701095?e=1766016000&v=beta&t=iZlgyCMBXZu6yj5y7oFuhBAMcIG-jts9OD4OUpVfons',
+        url: 'https://www.linkedin.com/pulse/al%C3%A9m-da-tecnologia-por-que-dominar-fundamentos-vale-mais-bomtempo-8q0lf/',
+        platform: 'LinkedIn',
+        date: '2025-11-14',
+    },
+    {
+        type: 'newsletter',
+        title: 'Security Beyond the Obvious',
+        description:
+            'How small security gaps can generate significant risks in real-world applications.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQE1on-G0TWjOg/article-cover_image-shrink_720_1280/B4DZpZtHILGsAQ-/0/1762441595349?e=1766016000&v=beta&t=A4_zmBWQBwuZQhi5S_UubiiK5jOpldNt0B54cRy34QE',
+        url: 'https://www.linkedin.com/pulse/seguran%C3%A7a-al%C3%A9m-do-%C3%B3bvio-pequenas-brechas-grandes-artur-bomtempo-colen-glulf/',
+        platform: 'LinkedIn',
+        date: '2025-11-06',
+    },
+    {
+        type: 'newsletter',
+        title: 'Design Patterns and Good Solutions',
+        description:
+            'Reflections on how design patterns influence writing more efficient and sustainable code.',
+        thumbnail:
+            'https://media.licdn.com/dms/image/v2/D4D12AQFPPGoftiRMIA/article-cover_image-shrink_720_1280/B4DZo104fBHsAI-/0/1761839654632?e=1766016000&v=beta&t=gEGmYMpz22XcB2vV4AgWytQFGStG1RCt-6TujhXHsSg',
+        url: 'https://www.linkedin.com/pulse/design-patterns-e-o-que-eles-nos-ensinam-sobre-boas-bomtempo-colen-ji2se/',
+        platform: 'LinkedIn',
+        date: '2025-10-30',
     },
     {
         type: 'article',
-        title: 'Clean Code in JavaScript',
-        description: 'Best practices for writing clean and maintainable JavaScript code.',
-        thumbnail: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=450&fit=crop',
-        url: '#',
+        title: 'API Authentication with JWT and Bcrypt',
+        description: 'Complete guide to authentication in Node.js and Express using JWT and Bcrypt.',
+        thumbnail:
+            'https://miro.medium.com/v2/resize:fit:720/format:webp/1*I50MOlC9LSdL9nW_FRgh4g.png',
+        url: 'https://medium.com/@arturbomtempo/autentica%C3%A7%C3%A3o-de-apis-em-node-js-com-jwt-e-bcrypt-2e1564d264d9',
         platform: 'Medium',
-        date: '2024-01-10',
+        date: '2025-08-19',
     },
     {
         type: 'video',
-        title: 'Advanced TypeScript',
-        description: 'Exploring advanced TypeScript features to improve your productivity.',
+        title: 'Modular Programming Course in Java',
+        description:
+            'Fundamentals of modularity, OOP, and best practices in Java with hands-on exercises.',
         thumbnail:
-            'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=450&fit=crop',
-        url: '#',
+            'https://i.ytimg.com/vi/VYdPnCauekk/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE%3D&rs=AOn4CLC9vXYZwgrhSPMAlxa9QvDYybppgQ',
+        url: 'https://youtube.com/playlist?list=PLeBlAOvjkM5hIR_G3m-DJjcDMNKMUypkH&si=DLFn9qAjuQFBW4Tj',
         platform: 'YouTube',
-        date: '2024-01-05',
-    },
-    {
-        type: 'article',
-        title: 'Micro Frontend Architecture',
-        description: 'How to implement micro frontends in large-scale applications.',
-        thumbnail: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=800&h=450&fit=crop',
-        url: '#',
-        platform: 'Medium',
-        date: '2023-12-20',
+        date: '2025-08-14',
     },
     {
         type: 'video',
-        title: 'Advanced Web Performance',
-        description: 'Advanced techniques to optimize web application performance.',
+        title: 'JavaScript Course for Beginners',
+        description:
+            'JavaScript fundamentals explained in a practical way, with exercises and projects.',
         thumbnail:
-            'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
-        url: '#',
+            'https://i.ytimg.com/vi/LrKqcRCD_zw/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE%3D&rs=AOn4CLBrupGGUSBvDjFswW-slSpuWGFwUg',
+        url: 'https://youtube.com/playlist?list=PLeBlAOvjkM5huodqseyXgkQanu_CEtsUq&si=e_nciQcHwoLUG_MY',
         platform: 'YouTube',
-        date: '2023-12-15',
+        date: '2025-07-11',
+    },
+    {
+        type: 'video',
+        title: 'Object-Oriented Programming Live Sessions',
+        description:
+            'Live classes explaining key OOP concepts with practical examples.',
+        thumbnail:
+            'https://i.ytimg.com/vi/DvZatfx5X4w/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE%3D&rs=AOn4CLCJQavzpa4l38nZ6EMpdnu_f6vPjQ',
+        url: 'https://youtube.com/playlist?list=PLeBlAOvjkM5jhpxHFU0SFfYf_Z3UbpUbY&si=8Uljc9fsCvsT_cuL',
+        platform: 'YouTube',
+        date: '2025-06-29',
+    },
+    {
+        type: 'video',
+        title: 'Binary Search Tree Playlist',
+        description:
+            'Series of lessons on BST with theory and practical exercises implemented in Java.',
+        thumbnail:
+            'https://i.ytimg.com/vi/JUtUEIAO2O8/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE%3D&rs=AOn4CLBUd-gMKr3bdpNW2Jcd20xBm6Oetw',
+        url: 'https://youtube.com/playlist?list=PLeBlAOvjkM5gf5vwnGKIy9Jh2AUXds-rm&si=rfCvGVGFH1NStX9n',
+        platform: 'YouTube',
+        date: '2025-06-19',
     },
     {
         type: 'article',
-        title: 'Testing with Jest and React Testing Library',
-        description: 'Complete guide on testing React applications.',
+        title: 'Binary Search Tree in Java',
+        description:
+            'Practical and didactic explanation of how BST works and its implementation in Java.',
         thumbnail:
-            'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=450&fit=crop',
-        url: '#',
+            'https://miro.medium.com/v2/resize:fit:720/format:webp/1*WtQFGUbk2zDZLP4S3SXrOw.png',
+        url: 'https://medium.com/@arturbomtempo/entendendo-a-%C3%A1rvore-bin%C3%A1ria-de-busca-com-java-teoria-e-pr%C3%A1tica-9171bf57da07',
         platform: 'Medium',
-        date: '2023-12-10',
+        date: '2025-06-16',
+    },
+    {
+        type: 'article',
+        title: 'REST API with Spring Boot',
+        description:
+            'Introductory guide to creating a complete CRUD using Spring Boot and best practices.',
+        thumbnail:
+            'https://miro.medium.com/v2/resize:fit:720/format:webp/1*mIKsH2nx_9gFpMZhFY_c9w.png',
+        url: 'https://medium.com/@arturbomtempo/construindo-uma-api-rest-com-spring-boot-a7e9b4e04380',
+        platform: 'Medium',
+        date: '2025-05-05',
+    },
+    {
+        type: 'article',
+        title: 'Understanding Algorithm Complexity',
+        description:
+            'Clear introduction to algorithm efficiency, with practical examples and intuitive explanations.',
+        thumbnail:
+            'https://miro.medium.com/v2/resize:fit:720/format:webp/1*UhlQvYhXjY2agLv21SjO8g.png',
+        url: 'https://medium.com/@arturbomtempo/noções-de-complexidade-entendendo-a-eficiência-dos-algoritmos-50d515235765',
+        platform: 'Medium',
+        date: '2025-03-15',
     },
 ];
 
 export const achievements: Achievement[] = [
     {
         icon: Trophy,
-        title: '10+ Awards',
-        description: 'Recognition received',
+        title: 'Awards and Recognition',
+        description: 'Academic and professional highlights',
         fullDescription:
-            'Throughout my academic and professional journey, I have had the honor of receiving various awards and recognitions that validate my effort, dedication, and technical excellence. Each achievement represents an important milestone in my development as a developer and professional.',
+            'Throughout my academic, professional, and volunteer journey, I have had the opportunity to participate in initiatives and projects that resulted in several awards and recognitions. Each achievement represents important moments of learning and growth, reinforcing my commitment to dedication and continuous improvement.',
         details: [
-            'Undefeated winner of "The Best" award promoted by Colégio Cotemig',
-            'Recognition for academic excellence in programming disciplines',
-            'Awards in hackathons and development competitions',
-            'Outstanding performance in academic projects and student initiatives',
-            'Recognition for contributions to open source projects',
+            '7x awarded "The Best of the Class" at Colégio Cotemig, for highest overall GPA of the semester',
+            '1st place in the Cotemig Startups program with the QuickFood Technologies team',
+            'Level 1, 2, and 3 Member Certification from WebTech Network',
+            'Best Interdisciplinary Project of the 1st semester in Computer Science – PUC Minas',
+            'Best Interdisciplinary Project of the 2nd semester in Software Engineering – PUC Minas',
+            '1st place in internal learning competition at White Wall',
+            '2x recognized as Outstanding Communication Volunteer at Central Baptist Church',
         ],
     },
     {
@@ -152,7 +502,7 @@ export const achievements: Achievement[] = [
         title: '4+ Years',
         description: 'Years of Experience',
         fullDescription:
-            'My professional journey began in 2023 and since then I have been accumulating valuable experiences in various areas of software development. I have worked with different technologies, methodologies, and teams, always seeking to deliver quality solutions and learn continuously.',
+            'My journey in technology began in 2021 and since then I have been accumulating valuable experiences in various areas of software development. I have worked with different technologies, methodologies, and teams, always seeking to deliver quality solutions and learn continuously.',
         details: [
             'Experience in full stack development focusing on React and Node.js',
             'Work in startups and medium to large companies',
@@ -163,16 +513,16 @@ export const achievements: Achievement[] = [
     },
     {
         icon: Presentation,
-        title: '5+ Talks',
-        description: 'Workshops and courses taught',
+        title: '7+ Talks',
+        description: 'Sharing knowledge and training new talents',
         fullDescription:
-            'I believe that sharing knowledge is fundamental for the growth of the tech community. Therefore, I have been giving talks, workshops, and courses on software development, sharing experiences and helping other developers on their journey.',
+            'I have a great interest in teaching and knowledge sharing. Throughout my journey, I have given talks, workshops, and educational meetings at events of different sizes, always seeking to contribute to the training of new professionals and encourage the community to evolve together.',
         details: [
-            'Talks at events like DevFest, meetups, and conferences',
-            'Workshops on React.js, Next.js, and front-end development',
-            'Backend courses with Java, Spring Boot, and Node.js',
-            'Technical mentoring for new members of WebTech Network',
-            'Presentations on best practices and software architecture',
+            'Workshops for two consecutive years at DevFest BH, the city\'s largest technology event, promoted by Google Developers Group',
+            'Talks at PUC Minas Computer Science Summer School',
+            'Meetings and training sessions as Chapter Lead at WebTech Network',
+            'Backend Journey at WebTech Network in partnership with LEVTY, with over 500 participants',
+            'Volunteer teacher of HTML, CSS, Python, and Scratch at Code Club project',
         ],
     },
 ];
@@ -476,7 +826,7 @@ export const ui = {
     about: {
         title: 'About Me',
         description:
-            "I am a developer passionate about creating innovative and efficient solutions. With over 5 years of experience in the market, I have been dedicated to building web and mobile applications that make a difference in people's lives. My focus is always on delivering clean, scalable code that meets users' real needs.",
+            "I am a developer passionate about creating innovative and efficient solutions. With over 4 years of experience, I have been dedicated to building web and mobile applications that make a difference in people's lives. My focus is always on delivering clean, scalable code that meets users' real needs.",
         techTitle: 'Technologies',
         testimonialsTitle: 'Testimonials',
         educationTitle: 'Education',
