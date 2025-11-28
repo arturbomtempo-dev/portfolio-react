@@ -73,8 +73,8 @@ export function About() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 animate-fade-in">
                     {achievements.map((achievement, index) => (
-                        <Card 
-                            key={index} 
+                        <Card
+                            key={index}
                             className="project-card text-center cursor-pointer group hover:shadow-lg hover:shadow-primary/20 dark:hover:shadow-primary/10 transition-all duration-300"
                             onClick={() => setSelectedAchievement(achievement)}
                         >
@@ -82,7 +82,9 @@ export function About() {
                             <h3 className="text-xl font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                                 {achievement.title}
                             </h3>
-                            <p className="text-muted-foreground text-sm">{achievement.description}</p>
+                            <p className="text-muted-foreground text-sm">
+                                {achievement.description}
+                            </p>
                         </Card>
                     ))}
                 </div>
@@ -134,8 +136,8 @@ export function About() {
                                                 "{testimonial.text}"
                                             </p>
                                             <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                                                <img 
-                                                    src={testimonial.image} 
+                                                <img
+                                                    src={testimonial.image}
                                                     alt={testimonial.name}
                                                     className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
                                                 />
