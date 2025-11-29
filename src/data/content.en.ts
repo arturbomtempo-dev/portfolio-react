@@ -870,7 +870,8 @@ export const ui = {
     },
     notFound: {
         title: '404',
-        message: 'Oops! Page not found',
+        heading: 'Page not found',
+        message: 'The page you are looking for does not exist or has been moved.',
         backButton: 'Back to Home',
     },
     footer: {

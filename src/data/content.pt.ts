@@ -892,7 +892,8 @@ export const ui = {
     },
     notFound: {
         title: '404',
-        message: 'Ops! Página não encontrada',
+        heading: 'Página não encontrada',
+        message: 'A página que você está procurando não existe ou foi movida.',
         backButton: 'Voltar para Home',
     },
     footer: {
